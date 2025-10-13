@@ -1,0 +1,7 @@
+Produce the final proposals JSON:
+{{
+  "chapter_id":"ch1",
+  "timeframe":{{"start":"YYYY-MM-DD","end":"YYYY-MM-DD"}},
+  "proposals":[{{ "section":"1.2", "title":"...", "gist":"...", "citation":"...", "link":"https://doi.org/...", "why_here":"..." }}],
+  "skipped_examples":[{{"title":"...", "reason":"incremental"}}]
+}}

@@ -1,0 +1,4 @@
+- Always prefer DOI/canonical links.
+- If arXiv only: mark as preprint.
+- Exclude papers with weak evidence or irrelevant scope.
+- Allow empty results for sections or chapters (no filler).

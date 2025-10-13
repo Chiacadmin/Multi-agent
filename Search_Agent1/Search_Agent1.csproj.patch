@@ -1,0 +1,15 @@
+--- a/Search_Agent1/Search_Agent1.csproj
++++ b/Search_Agent1/Search_Agent1.csproj
+@@
+   <ItemGroup>
++    <Compile Include="Agents\ResearchUpdaterAgent.cs" />
++    <Compile Include="Agents\WriterUpdaterAgent.cs" />
++    <Compile Include="Models\Paper.cs" />
++    <Compile Include="Models\Proposal.cs" />
++    <Compile Include="Services\SearchPapersService.cs" />
++    <Compile Include="Services\SectionNumberingService.cs" />
++    <Compile Include="Renderers\LatexRenderer.cs" />
++    <Compile Include="Renderers\MarkdownRenderer.cs" />
++    <Compile Include="Validation\ProposalValidator.cs" />
++    <Compile Include="Program_Updater.cs" />
+   </ItemGroup>

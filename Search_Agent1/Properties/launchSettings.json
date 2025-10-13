@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Search_Agent1": {
+      "commandName": "Project",
+      "workingDirectory": "$(ProjectDir)"
+    }
+  }
+}

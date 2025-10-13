@@ -1,0 +1,12 @@
+For each "include" (and optional "maybe"), write a draft subsection:
+- Subsection title (with year)
+- 4–6 sentence gist (last sentence must tie back to the mapped section)
+- Citation (APA/house style)
+- Link (DOI/canonical)
+- WhyHere (one sentence: why this belongs under that section)
+
+INPUT JSON:
+{0}
+
+OUTPUT JSON ONLY:
+{{ "drafts":[{{ "section":"1.2", "subsection_title":"...", "gist":"...", "citation":"...", "link":"...", "why_here":"..." }}] }}

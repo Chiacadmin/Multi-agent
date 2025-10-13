@@ -1,0 +1,4 @@
+Merge duplicates (prefer peer-reviewed). Order inclusions by SOTA > peer-reviewed > recency.
+
+OUTPUT JSON ONLY:
+{{ "by_section": {{ "1.2":[{{...}}], "1.4":[{{...}}] }} }}

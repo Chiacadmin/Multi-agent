@@ -1,0 +1,19 @@
+{
+  "name": "mcp-papers-server",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^4.4.1",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "eslint": "^9.36.0",
+    "typescript": "^5.5.4"
+  }
+}

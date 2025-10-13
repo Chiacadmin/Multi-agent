@@ -1,0 +1,7 @@
+For each candidate (title/authors/venue/year/doi/url/abstract/source), decide include|exclude|maybe and map to the best chapter section (e.g., "1.2"). Include if paradigm/SOTA/standard/dataset/major advance; otherwise exclude.
+
+INPUT (JSON):
+{0}
+
+OUTPUT JSON ONLY:
+{{ "decisions":[{{ "paper":{{...}}, "decision":"include|exclude|maybe", "mapping":{{"primary":"1.2"}}, "rationale":["..."] }}] }}

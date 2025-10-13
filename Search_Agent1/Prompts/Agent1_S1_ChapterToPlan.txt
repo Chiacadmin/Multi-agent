@@ -1,0 +1,8 @@
+From the full chapter text and timeframe below, identify 8–15 THEMES and create 3–6 scholarly queries for each, plus 5–8 global queries.
+
+CHAPTER:
+{0}
+
+TIMEFRAME: {1} to {2}
+
+OUTPUT (JSON ONLY): {{ "themes":[{{"name":"...","queries":["..."]}}], "global_queries":[...] }}
