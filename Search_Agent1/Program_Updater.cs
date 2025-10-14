@@ -161,13 +161,20 @@ internal static class Program_Updater
                             }
                             catch
                             {
-                                res = await ArxivSearchAsync(seed, startDt, endDt, Math.Max(25, chapterItemCap), arxivTimeoutMs);
+                                // Fallback: query both OpenAlex + arXiv and merge
+                                var oa = await OpenAlexSearchAsync(seed, startDt, endDt, Math.Max(25, chapterItemCap));
+                                var ax = await ArxivSearchAsync(seed, startDt, endDt, Math.Max(25, chapterItemCap), arxivTimeoutMs);
+                                res = MergeLists(oa, ax, Math.Max(25, chapterItemCap));
                             }
                         }
                         else
                         {
-                            res = await ArxivSearchAsync(seed, startDt, endDt, Math.Max(25, chapterItemCap), arxivTimeoutMs);
+                            // No MCP: directly use OpenAlex + arXiv merge
+                            var oa = await OpenAlexSearchAsync(seed, startDt, endDt, Math.Max(25, chapterItemCap));
+                            var ax = await ArxivSearchAsync(seed, startDt, endDt, Math.Max(25, chapterItemCap), arxivTimeoutMs);
+                            res = MergeLists(oa, ax, Math.Max(25, chapterItemCap));
                         }
+
                         return res;
                     }
                     catch
@@ -249,6 +256,38 @@ internal static class Program_Updater
         Console.WriteLine($"[Updater] Wrote index: {indexPath}");
         Console.WriteLine("[Updater] Done.");
     }
+
+    private static List<Dictionary<string, object?>> MergeLists(
+    List<Dictionary<string, object?>> list1,
+    List<Dictionary<string, object?>> list2,
+    int limit)
+    {
+        var merged = new List<Dictionary<string, object?>>();
+        var seen = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+        void TryAddList(List<Dictionary<string, object?>> list)
+        {
+            foreach (var it in list)
+            {
+                string key = FirstNotEmpty(
+                    it.TryGetValue("doi", out var d) ? d as string : null,
+                    it.TryGetValue("pdf_url", out var p) ? p as string : null,
+                    it.TryGetValue("url", out var u) ? u as string : null,
+                    it.TryGetValue("title", out var t) ? t as string : null
+                ) ?? "";
+                if (string.IsNullOrWhiteSpace(key)) continue;
+                if (!seen.Add(key)) continue;
+                merged.Add(it);
+                if (merged.Count >= limit) break;
+            }
+        }
+
+        TryAddList(list1);
+        if (merged.Count < limit) TryAddList(list2);
+
+        return merged;
+    }
+
 
     // ======================== MCP client ========================
 
@@ -455,6 +494,104 @@ internal static class Program_Updater
             }
         }
     }
+
+    private static async Task<List<Dictionary<string, object?>>> OpenAlexSearchAsync(
+    string query, DateTime startDate, DateTime endDate, int limit)
+    {
+        // Add your contact email to avoid 403 or throttling
+        var mailto = Environment.GetEnvironmentVariable("OPENALEX_MAILTO")
+                     ?? "you@domain.com";
+
+        // Build base URL: /works endpoint
+        var baseUrl = "https://api.openalex.org/works";
+
+        // Use “search” parameter to search across title / abstract etc.
+        var url = $"{baseUrl}?search={Uri.EscapeDataString(query)}" +
+                  $"&per-page={Math.Max(1, Math.Min(limit, 25))}" +
+                  $"&mailto={Uri.EscapeDataString(mailto)}";
+
+        // Optionally you could filter by publication date or year:
+        // e.g. &filter=publication_year:2020-2025 etc.
+        // But here we’ll fetch broadly and then filter locally by date window.
+
+        // Prepare request
+        using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
+        var req = new HttpRequestMessage(HttpMethod.Get, url);
+        req.Headers.UserAgent.ParseAdd($"SearchAgent1-Updater/1.0 (+mailto:{mailto})");
+
+        using var resp = await http.SendAsync(req, HttpCompletionOption.ResponseContentRead, cts.Token);
+        resp.EnsureSuccessStatusCode();
+        var body = await resp.Content.ReadAsStringAsync(cts.Token);
+
+        using var doc = JsonDocument.Parse(body);
+        var root = doc.RootElement;
+
+        var list = new List<Dictionary<string, object?>>();
+
+        // “results” is the array in OpenAlex
+        if (root.TryGetProperty("results", out var arr) && arr.ValueKind == JsonValueKind.Array)
+        {
+            foreach (var w in arr.EnumerateArray())
+            {
+                // Extract fields
+                string? title = TryGetString(w, "title");
+                int? pubYear = TryGetInt(w, "publication_year");
+                string? doi = TryGetString(w, "doi");
+                string? venue = TryGetString(w, "host_venue", "display_name");
+                string? urlL = TryGetString(w, "primary_location", "landing_page_url")
+                              ?? TryGetString(w, "id");
+                string? pdf = TryGetString(w, "primary_location", "pdf_url");
+
+                // Optional: filter by date window
+                if (pubYear.HasValue)
+                {
+                    var y = pubYear.Value;
+                    if (new DateTime(y, 1, 1) < startDate || new DateTime(y, 12, 31) > endDate.AddYears(1))
+                    {
+                        // you might want a stricter filter depending on your window
+                        // but here we skip if year is completely outside window
+                        // you can remove this check if too strict
+                    }
+                }
+
+                var entry = new Dictionary<string, object?>()
+                {
+                    ["title"] = title,
+                    ["year"] = pubYear.HasValue ? pubYear.Value.ToString() : null,
+                    ["venue"] = venue,
+                    ["doi"] = string.IsNullOrWhiteSpace(doi) ? null : doi,
+                    ["url"] = string.IsNullOrWhiteSpace(urlL) ? null : urlL,
+                    ["pdf_url"] = string.IsNullOrWhiteSpace(pdf) ? null : pdf
+                };
+
+                list.Add(entry);
+                if (list.Count >= limit) break;
+            }
+        }
+
+        return list;
+    }
+
+    // Helper methods to use in that implementation:
+    private static string? TryGetString(JsonElement el, params string[] path)
+    {
+        foreach (var p in path)
+        {
+            if (el.ValueKind != JsonValueKind.Object) return null;
+            if (!el.TryGetProperty(p, out el)) return null;
+        }
+        if (el.ValueKind == JsonValueKind.String) return el.GetString();
+        if (el.ValueKind == JsonValueKind.Number) return el.ToString();
+        return null;
+    }
+
+    private static int? TryGetInt(JsonElement el, params string[] path)
+    {
+        var s = TryGetString(el, path);
+        if (s != null && int.TryParse(s, out var v)) return v;
+        return null;
+    }
+
 
     private static List<Dictionary<string, object?>> ParseArxivXml(string xml, DateTime startDate, DateTime endDate)
     {

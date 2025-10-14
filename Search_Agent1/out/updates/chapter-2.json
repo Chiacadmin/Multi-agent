@@ -1,3 +1,804 @@
 {
-  "items": []
+  "items": [
+    {
+      "title": "Machine Learning in Sustainable Agriculture: Systematic Review and Research Perspectives",
+      "year": "2025",
+      "venue": null,
+      "doi": "https://doi.org/10.3390/agriculture15040377",
+      "url": "https://doi.org/10.3390/agriculture15040377",
+      "pdf_url": null
+    },
+    {
+      "title": "Review of Fault Detection and Diagnosis Methods in Power Plants: Algorithms, Architectures, and Trends",
+      "year": "2025",
+      "venue": null,
+      "doi": "https://doi.org/10.3390/app15116334",
+      "url": "https://doi.org/10.3390/app15116334",
+      "pdf_url": null
+    },
+    {
+      "title": "Reinforcement Learning for Optimizing Renewable Energy Utilization in Buildings: A Review on Applications and Innovations",
+      "year": "2025",
+      "venue": null,
+      "doi": "https://doi.org/10.3390/en18071724",
+      "url": "https://doi.org/10.3390/en18071724",
+      "pdf_url": null
+    },
+    {
+      "title": "Evaluating a Large Reasoning Models Performance on Open-Ended Medical Scenarios",
+      "year": "2025",
+      "venue": null,
+      "doi": "https://doi.org/10.1101/2025.04.29.25326666",
+      "url": "https://doi.org/10.1101/2025.04.29.25326666",
+      "pdf_url": null
+    },
+    {
+      "title": "Remote Sensing Techniques for Assessing Snow Avalanche Formation Factors and Building Hazard Monitoring Systems",
+      "year": "2024",
+      "venue": null,
+      "doi": "https://doi.org/10.3390/atmos15111343",
+      "url": "https://doi.org/10.3390/atmos15111343",
+      "pdf_url": "https://www.mdpi.com/2073-4433/15/11/1343/pdf?version=1731130366"
+    },
+    {
+      "title": "The Role of Artificial Intelligence in Nursing Education, and Practice: An Umbrella Review (Preprint)",
+      "year": "2024",
+      "venue": null,
+      "doi": "https://doi.org/10.2196/69881",
+      "url": "https://doi.org/10.2196/69881",
+      "pdf_url": null
+    },
+    {
+      "title": "Internet of Things: a comprehensive overview, architectures, applications, simulation tools, challenges and future directions",
+      "year": "2024",
+      "venue": null,
+      "doi": "https://doi.org/10.1007/s43926-024-00084-3",
+      "url": "https://doi.org/10.1007/s43926-024-00084-3",
+      "pdf_url": null
+    },
+    {
+      "title": "Modern computing: Vision and challenges",
+      "year": "2024",
+      "venue": null,
+      "doi": "https://doi.org/10.1016/j.teler.2024.100116",
+      "url": "https://doi.org/10.1016/j.teler.2024.100116",
+      "pdf_url": null
+    },
+    {
+      "title": "Global cancer statistics 2022: GLOBOCAN estimates of incidence and mortality worldwide for 36 cancers in 185 countries",
+      "year": "2024",
+      "venue": null,
+      "doi": "https://doi.org/10.3322/caac.21834",
+      "url": "https://doi.org/10.3322/caac.21834",
+      "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.3322/caac.21834"
+    },
+    {
+      "title": "Recently emerging trends in big data analytic methods for modeling and combating climate change effects",
+      "year": "2024",
+      "venue": null,
+      "doi": "https://doi.org/10.1186/s42162-024-00307-5",
+      "url": "https://doi.org/10.1186/s42162-024-00307-5",
+      "pdf_url": "https://energyinformatics.springeropen.com/counter/pdf/10.1186/s42162-024-00307-5"
+    },
+    {
+      "title": "Development of An Intelligent Learning Evaluation System Based on Big Data",
+      "year": "2024",
+      "venue": null,
+      "doi": "https://doi.org/10.56294/dm2024.569",
+      "url": "https://doi.org/10.56294/dm2024.569",
+      "pdf_url": null
+    },
+    {
+      "title": "Integrating Wireless Remote Sensing and Sensors for Monitoring Pesticide Pollution in Surface and Groundwater",
+      "year": "2024",
+      "venue": null,
+      "doi": "https://doi.org/10.3390/s24103191",
+      "url": "https://doi.org/10.3390/s24103191",
+      "pdf_url": "https://www.mdpi.com/1424-8220/24/10/3191/pdf?version=1715941343"
+    },
+    {
+      "title": "2023 Alzheimer\u0027s disease facts and figures",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.1002/alz.13016",
+      "url": "https://doi.org/10.1002/alz.13016",
+      "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/alz.13016"
+    },
+    {
+      "title": "How do outsourcing services affect agricultural eco-efficiency? Perspectives from farmland scale and technology substitution",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.1080/09640568.2023.2246170",
+      "url": "https://doi.org/10.1080/09640568.2023.2246170",
+      "pdf_url": null
+    },
+    {
+      "title": "Government at a Glance 2023",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.1787/3d5c5d31-en",
+      "url": "https://doi.org/10.1787/3d5c5d31-en",
+      "pdf_url": "https://www.oecd-ilibrary.org/deliver/3d5c5d31-en.pdf?itemId=%2Fcontent%2Fpublication%2F3d5c5d31-en\u0026mimeType=pdf"
+    },
+    {
+      "title": "Food Is Medicine: A Presidential Advisory From the American Heart Association",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.1161/cir.0000000000001182",
+      "url": "https://doi.org/10.1161/cir.0000000000001182",
+      "pdf_url": "https://www.ahajournals.org/doi/pdf/10.1161/CIR.0000000000001182"
+    },
+    {
+      "title": "Personalized RNA neoantigen vaccines stimulate T cells in pancreatic cancer",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.1038/s41586-023-06063-y",
+      "url": "https://doi.org/10.1038/s41586-023-06063-y",
+      "pdf_url": "https://www.nature.com/articles/s41586-023-06063-y.pdf"
+    },
+    {
+      "title": "Structural parameters of nanoparticles affecting their toxicity for biomedical applications: a review",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.1007/s11051-023-05690-w",
+      "url": "https://doi.org/10.1007/s11051-023-05690-w",
+      "pdf_url": "https://link.springer.com/content/pdf/10.1007/s11051-023-05690-w.pdf"
+    },
+    {
+      "title": "2023 Critical Materials Strategy",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.2172/1998242",
+      "url": "https://doi.org/10.2172/1998242",
+      "pdf_url": null
+    },
+    {
+      "title": "Large language models (LLM) and ChatGPT: what will the impact on nuclear medicine be?",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.1007/s00259-023-06172-w",
+      "url": "https://doi.org/10.1007/s00259-023-06172-w",
+      "pdf_url": "https://link.springer.com/content/pdf/10.1007/s00259-023-06172-w.pdf"
+    },
+    {
+      "title": "Review of Electric Vehicle Charging Technologies, Standards, Architectures, and Converter Configurations",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.1109/access.2023.3267164",
+      "url": "https://doi.org/10.1109/access.2023.3267164",
+      "pdf_url": "https://ieeexplore.ieee.org/ielx7/6287639/6514899/10102467.pdf"
+    },
+    {
+      "title": "Power Electronics Technology for Large-Scale Renewable Energy Generation",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.1109/jproc.2023.3253165",
+      "url": "https://doi.org/10.1109/jproc.2023.3253165",
+      "pdf_url": "https://ieeexplore.ieee.org/ielx7/5/10092901/10070105.pdf"
+    },
+    {
+      "title": "Intelligent Energy-Efficient Train Trajectory Optimization Approach Based on Supervised Reinforcement Learning for Urban Rail Transits",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.1109/access.2023.3261900",
+      "url": "https://doi.org/10.1109/access.2023.3261900",
+      "pdf_url": "https://ieeexplore.ieee.org/ielx7/6287639/6514899/10081361.pdf"
+    },
+    {
+      "title": "Examining the role of consumer motivations to use voice assistants for fashion shopping: The mediating role of awe experience and eWOM",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.1016/j.techfore.2023.122407",
+      "url": "https://doi.org/10.1016/j.techfore.2023.122407",
+      "pdf_url": null
+    },
+    {
+      "title": "Building performance simulation in the brave new world of artificial intelligence and digital twins: A systematic review",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.1016/j.enbuild.2023.113171",
+      "url": "https://doi.org/10.1016/j.enbuild.2023.113171",
+      "pdf_url": null
+    },
+    {
+      "title": "Recent Technological Progress to Empower Smart Manufacturing: Review and Potential Guidelines",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.1109/access.2023.3246029",
+      "url": "https://doi.org/10.1109/access.2023.3246029",
+      "pdf_url": "https://ieeexplore.ieee.org/ielx7/6287639/6514899/10045684.pdf"
+    },
+    {
+      "title": "AI-Empowered Methods for Smart Energy Consumption: A Review of Load Forecasting, Anomaly Detection and Demand Response",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.1007/s40684-023-00537-0",
+      "url": "https://doi.org/10.1007/s40684-023-00537-0",
+      "pdf_url": "https://link.springer.com/content/pdf/10.1007/s40684-023-00537-0.pdf"
+    },
+    {
+      "title": "Artificial Intelligence (AI) implementation in the Design of Single Pilot Operations Commercial Airplanes",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.54941/ahfe1002910",
+      "url": "https://doi.org/10.54941/ahfe1002910",
+      "pdf_url": null
+    },
+    {
+      "title": "The Factors Affecting Digital Transformation in Vietnam Logistics Enterprises",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.3390/electronics12081825",
+      "url": "https://doi.org/10.3390/electronics12081825",
+      "pdf_url": "https://www.mdpi.com/2079-9292/12/8/1825/pdf?version=1681288253"
+    },
+    {
+      "title": "Impact of Video Games, Gamification, and Game-Based Learning on Sustainability Education in Higher Education",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.3390/su151713032",
+      "url": "https://doi.org/10.3390/su151713032",
+      "pdf_url": "https://www.mdpi.com/2071-1050/15/17/13032/pdf?version=1693381009"
+    },
+    {
+      "title": "An\u00E1lisis de la relaci\u00F3n entre el uso de dispositivos digitales y el rendimiento acad\u00E9mico en matem\u00E1ticas",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.55813/gaea/rcym/v1/n2/14",
+      "url": "https://doi.org/10.55813/gaea/rcym/v1/n2/14",
+      "pdf_url": null
+    },
+    {
+      "title": "STEM Education in Malaysia: An Organisational Development Approach?",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.37934/frle.29.1.119",
+      "url": "https://doi.org/10.37934/frle.29.1.119",
+      "pdf_url": null
+    },
+    {
+      "title": "Implementing AIRM: a new AI recruiting model for the Saudi Arabia labour market",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.1186/s13731-023-00324-w",
+      "url": "https://doi.org/10.1186/s13731-023-00324-w",
+      "pdf_url": "https://innovation-entrepreneurship.springeropen.com/counter/pdf/10.1186/s13731-023-00324-w"
+    },
+    {
+      "title": "Detection of Vulnerabilities in Smart Buildings Using the Shodan Tool",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.3390/electronics12234815",
+      "url": "https://doi.org/10.3390/electronics12234815",
+      "pdf_url": "https://www.mdpi.com/2079-9292/12/23/4815/pdf?version=1701176408"
+    },
+    {
+      "title": "Enzymes\u2019 Power for Plastics Degradation",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.1021/acs.chemrev.2c00644",
+      "url": "https://doi.org/10.1021/acs.chemrev.2c00644",
+      "pdf_url": null
+    },
+    {
+      "title": "Improving the Landscape for Sustainable Infrastructure Financing",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.1787/bc2757cd-en",
+      "url": "https://doi.org/10.1787/bc2757cd-en",
+      "pdf_url": null
+    },
+    {
+      "title": "From LCA to circular design: A comparative study of digital tools for the built environment",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.1016/j.resconrec.2023.107291",
+      "url": "https://doi.org/10.1016/j.resconrec.2023.107291",
+      "pdf_url": null
+    },
+    {
+      "title": "The State and Capitalism in China",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.1017/9781009356732",
+      "url": "https://doi.org/10.1017/9781009356732",
+      "pdf_url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/621573281A601FF77F085386336A991D/9781009356749AR.pdf/the-state-and-capitalism-in-china.pdf"
+    },
+    {
+      "title": "Machine Learning for Credit Risk Prediction: A Systematic Literature Review",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.20944/preprints202308.0947.v1",
+      "url": "https://doi.org/10.20944/preprints202308.0947.v1",
+      "pdf_url": null
+    },
+    {
+      "title": "Data science technology course: The design, assessment and computing environment perspectives",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.1007/s10639-022-11558-8",
+      "url": "https://doi.org/10.1007/s10639-022-11558-8",
+      "pdf_url": "https://link.springer.com/content/pdf/10.1007/s10639-022-11558-8.pdf"
+    },
+    {
+      "title": "Application of implementation science framework to develop and adopt regulatory science in different national regulatory authorities",
+      "year": "2023",
+      "venue": null,
+      "doi": "https://doi.org/10.3389/fpubh.2023.1172557",
+      "url": "https://doi.org/10.3389/fpubh.2023.1172557",
+      "pdf_url": "https://www.frontiersin.org/articles/10.3389/fpubh.2023.1172557/pdf"
+    },
+    {
+      "title": "The Role of Machine Learning in IoT: A Survey",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.1109/icosec54921.2022.9952042",
+      "url": "https://doi.org/10.1109/icosec54921.2022.9952042",
+      "pdf_url": null
+    },
+    {
+      "title": "AI-big data analytics for building automation and management systems: a survey, actual challenges and future perspectives",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.1007/s10462-022-10286-2",
+      "url": "https://doi.org/10.1007/s10462-022-10286-2",
+      "pdf_url": "https://link.springer.com/content/pdf/10.1007/s10462-022-10286-2.pdf"
+    },
+    {
+      "title": "Sustainable Energy Transition for Renewable and Low Carbon Grid Electricity Generation and Supply",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.3389/fenrg.2021.743114",
+      "url": "https://doi.org/10.3389/fenrg.2021.743114",
+      "pdf_url": "https://www.frontiersin.org/articles/10.3389/fenrg.2021.743114/pdf"
+    },
+    {
+      "title": "The Physical Activity Environment Policy Index for monitoring government policies and actions to improve physical activity",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.1093/eurpub/ckac062",
+      "url": "https://doi.org/10.1093/eurpub/ckac062",
+      "pdf_url": "https://academic.oup.com/eurpub/article-pdf/32/Supplement_4/iv50/47370949/ckac062.pdf"
+    },
+    {
+      "title": "Radiotherapy combined with immunotherapy: the dawn of cancer treatment",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.1038/s41392-022-01102-y",
+      "url": "https://doi.org/10.1038/s41392-022-01102-y",
+      "pdf_url": "https://www.nature.com/articles/s41392-022-01102-y.pdf"
+    },
+    {
+      "title": "Recycling of Lithium\u2010Ion Batteries\u2014Current State of the Art, Circular Economy, and Next Generation Recycling",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.1002/aenm.202102917",
+      "url": "https://doi.org/10.1002/aenm.202102917",
+      "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/aenm.202102917"
+    },
+    {
+      "title": "Serving citizens",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.1787/65223af7-en",
+      "url": "https://doi.org/10.1787/65223af7-en",
+      "pdf_url": "https://www.oecd-ilibrary.org/deliver/65223af7-en.pdf?itemId=%2Fcontent%2Fpaper%2F65223af7-en\u0026mimeType=pdf"
+    },
+    {
+      "title": "A Structural Approach on Enablers of IoT for Sustainable Development of Smart Cities",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.20944/preprints202205.0102.v1",
+      "url": "https://doi.org/10.20944/preprints202205.0102.v1",
+      "pdf_url": null
+    },
+    {
+      "title": "Bioplastics for a circular economy",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.1038/s41578-021-00407-8",
+      "url": "https://doi.org/10.1038/s41578-021-00407-8",
+      "pdf_url": "https://www.nature.com/articles/s41578-021-00407-8.pdf"
+    },
+    {
+      "title": "Use of Digital Health Interventions in Sub-Saharan Africa for Health Systems Strengthening Over the Last 10 Years: A Scoping Review Protocol",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.3389/fdgth.2022.874251",
+      "url": "https://doi.org/10.3389/fdgth.2022.874251",
+      "pdf_url": "https://www.frontiersin.org/articles/10.3389/fdgth.2022.874251/pdf"
+    },
+    {
+      "title": "Analysis of Artificial Intelligence Training Indicators According to the Results of Russian Universities Monitoring",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.31992/0869-3617-2022-31-7-9-24",
+      "url": "https://doi.org/10.31992/0869-3617-2022-31-7-9-24",
+      "pdf_url": "https://vovr.elpub.ru/jour/article/download/3866/2128"
+    },
+    {
+      "title": "Decarbonizing the oil refining industry: A systematic review of sociotechnical systems, technological innovations, and policy options",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.1016/j.erss.2022.102542",
+      "url": "https://doi.org/10.1016/j.erss.2022.102542",
+      "pdf_url": null
+    },
+    {
+      "title": "Measuring the environmental impacts of artificial intelligence compute and applications",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.1787/7babf571-en",
+      "url": "https://doi.org/10.1787/7babf571-en",
+      "pdf_url": "https://www.oecd-ilibrary.org/deliver/7babf571-en.pdf?itemId=%2Fcontent%2Fpaper%2F7babf571-en\u0026mimeType=pdf"
+    },
+    {
+      "title": "Biosurfactants: Production, properties, applications, trends, and general perspectives",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.1016/j.bej.2022.108377",
+      "url": "https://doi.org/10.1016/j.bej.2022.108377",
+      "pdf_url": null
+    },
+    {
+      "title": "Teaching and Learning with Technology: Effectiveness of ICT Integration in Schools",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.17509/ijert.v2i2.43554",
+      "url": "https://doi.org/10.17509/ijert.v2i2.43554",
+      "pdf_url": "https://ejournal.upi.edu/index.php/IJERT/article/download/43554/18082"
+    },
+    {
+      "title": "Digital Skills as a Significant Factor of Human Resources Development",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.3390/su142013117",
+      "url": "https://doi.org/10.3390/su142013117",
+      "pdf_url": "https://www.mdpi.com/2071-1050/14/20/13117/pdf?version=1665656176"
+    },
+    {
+      "title": "An Overview of the Applications of Earth Observation Satellite Data: Impacts and Future Trends",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.3390/rs14081863",
+      "url": "https://doi.org/10.3390/rs14081863",
+      "pdf_url": "https://www.mdpi.com/2072-4292/14/8/1863/pdf?version=1650011737"
+    },
+    {
+      "title": "Measuring the Digital Skills of Catalan Health Care Professionals as a Key Step Toward a Strategic Training Plan: Digital Competence Test Validation Study",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.2196/38347",
+      "url": "https://doi.org/10.2196/38347",
+      "pdf_url": "https://www.jmir.org/2022/11/e38347/PDF"
+    },
+    {
+      "title": "A comprehensive and systematic literature review on the big data management techniques in the internet of things",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.1007/s11276-022-03177-5",
+      "url": "https://doi.org/10.1007/s11276-022-03177-5",
+      "pdf_url": "https://link.springer.com/content/pdf/10.1007/s11276-022-03177-5.pdf"
+    },
+    {
+      "title": "The Design Blueprint for a Large-Scale Telehealth Platform",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.1155/2022/8486508",
+      "url": "https://doi.org/10.1155/2022/8486508",
+      "pdf_url": "https://downloads.hindawi.com/journals/ijta/2022/8486508.pdf"
+    },
+    {
+      "title": "A systematic overview of data federation systems",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.3233/sw-223201",
+      "url": "https://doi.org/10.3233/sw-223201",
+      "pdf_url": "https://content.iospress.com:443/download/semantic-web/sw223201?id=semantic-web%2Fsw223201"
+    },
+    {
+      "title": "Practical Adoption of Cloud Computing in Power Systems\u2014Drivers, Challenges, Guidance, and Real-World Use Cases",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.1109/tsg.2022.3148978",
+      "url": "https://doi.org/10.1109/tsg.2022.3148978",
+      "pdf_url": null
+    },
+    {
+      "title": "Probabilistic data structures in smart city: Survey, applications, challenges, and research directions",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.3233/ais-220101",
+      "url": "https://doi.org/10.3233/ais-220101",
+      "pdf_url": "https://content.iospress.com:443/download/journal-of-ambient-intelligence-and-smart-environments/ais220101?id=journal-of-ambient-intelligence-and-smart-environments%2Fais220101"
+    },
+    {
+      "title": null,
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.37708/p.swu.v10i1",
+      "url": "https://doi.org/10.37708/p.swu.v10i1",
+      "pdf_url": null
+    },
+    {
+      "title": "Recent Technological Advances in Financial Market Infrastructure in ASEAN\u002B3",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.22617/tcs220248-2",
+      "url": "https://doi.org/10.22617/tcs220248-2",
+      "pdf_url": "https://www.adb.org/sites/default/files/publication/801626/technological-advances-financial-market-infrastructure-asean3.pdf"
+    },
+    {
+      "title": "Data Science Technology Course: The Design, Assessment and Computing Environment Perspectives",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.21203/rs.3.rs-2076916/v1",
+      "url": "https://doi.org/10.21203/rs.3.rs-2076916/v1",
+      "pdf_url": "https://www.researchsquare.com/article/rs-2076916/latest.pdf"
+    },
+    {
+      "title": "A Call for an Ethics and Governance Action Plan to Harness the Power of Artificial Intelligence and Digitalization in Nephrology",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.1016/j.semnephrol.2021.05.009",
+      "url": "https://doi.org/10.1016/j.semnephrol.2021.05.009",
+      "pdf_url": "http://www.seminarsinnephrology.org/article/S0270929521000796/pdf"
+    },
+    {
+      "title": "Towards Sustainable Development through Higher Education Quality Assurance",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.3390/educsci11110664",
+      "url": "https://doi.org/10.3390/educsci11110664",
+      "pdf_url": "https://www.mdpi.com/2227-7102/11/11/664/pdf?version=1634753738"
+    },
+    {
+      "title": "Final Report and Recommendations",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.3998/mpub.12230588",
+      "url": "https://doi.org/10.3998/mpub.12230588",
+      "pdf_url": "https://www.fulcrum.org/ebooks/m326m4101/download?locale=en"
+    },
+    {
+      "title": "Expert elicitation survey predicts 37% to 49% declines in wind energy costs by 2050",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.1038/s41560-021-00810-z",
+      "url": "https://doi.org/10.1038/s41560-021-00810-z",
+      "pdf_url": "https://www.nature.com/articles/s41560-021-00810-z.pdf"
+    },
+    {
+      "title": "The genetics of obesity: from discovery to biology",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.1038/s41576-021-00414-z",
+      "url": "https://doi.org/10.1038/s41576-021-00414-z",
+      "pdf_url": "https://www.nature.com/articles/s41576-021-00414-z.pdf"
+    },
+    {
+      "title": "Metal additive manufacturing in aerospace: A review",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.1016/j.matdes.2021.110008",
+      "url": "https://doi.org/10.1016/j.matdes.2021.110008",
+      "pdf_url": null
+    },
+    {
+      "title": "Tightening EU ETS targets in line with the European Green Deal: Impacts on the decarbonization of the EU power sector",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.1016/j.apenergy.2021.116914",
+      "url": "https://doi.org/10.1016/j.apenergy.2021.116914",
+      "pdf_url": null
+    },
+    {
+      "title": "Usage impact on data center electricity needs: A system dynamic forecasting model",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.1016/j.apenergy.2021.116798",
+      "url": "https://doi.org/10.1016/j.apenergy.2021.116798",
+      "pdf_url": null
+    },
+    {
+      "title": "A Review of Bidirectional On-Board Chargers for Electric Vehicles",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.1109/access.2021.3069448",
+      "url": "https://doi.org/10.1109/access.2021.3069448",
+      "pdf_url": "https://ieeexplore.ieee.org/ielx7/6287639/9312710/09389559.pdf"
+    },
+    {
+      "title": "Climate change and industrial F-gases: A critical and systematic review of developments, sociotechnical systems and policy options for reducing synthetic greenhouse gas emissions",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.1016/j.rser.2021.110759",
+      "url": "https://doi.org/10.1016/j.rser.2021.110759",
+      "pdf_url": null
+    },
+    {
+      "title": "A Review on UAV Wireless Charging: Fundamentals, Applications, Charging Techniques and Standards",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.1109/access.2021.3077041",
+      "url": "https://doi.org/10.1109/access.2021.3077041",
+      "pdf_url": "https://ieeexplore.ieee.org/ielx7/6287639/9312710/09420719.pdf"
+    },
+    {
+      "title": "Photovoltaic (PV) Module Technologies: 2020 Benchmark Costs and Technology Evolution Framework Results",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.2172/1829459",
+      "url": "https://doi.org/10.2172/1829459",
+      "pdf_url": null
+    },
+    {
+      "title": "Hepatocellular carcinoma",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.1038/s41572-020-00240-3",
+      "url": "https://doi.org/10.1038/s41572-020-00240-3",
+      "pdf_url": "https://www.nature.com/articles/s41572-020-00240-3.pdf"
+    },
+    {
+      "title": "Sensor and Sensor Fusion Technology in Autonomous Vehicles: A Review",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.3390/s21062140",
+      "url": "https://doi.org/10.3390/s21062140",
+      "pdf_url": "https://www.mdpi.com/1424-8220/21/6/2140/pdf?version=1616339580"
+    },
+    {
+      "title": "Implementation analysis of IoT-based offloading frameworks on cloud/edge computing for sensor generated big data",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.1007/s40747-021-00434-6",
+      "url": "https://doi.org/10.1007/s40747-021-00434-6",
+      "pdf_url": "https://link.springer.com/content/pdf/10.1007/s40747-021-00434-6.pdf"
+    },
+    {
+      "title": "A review of multimodal human activity recognition with special emphasis on classification, applications, challenges and future directions",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.1016/j.knosys.2021.106970",
+      "url": "https://doi.org/10.1016/j.knosys.2021.106970",
+      "pdf_url": null
+    },
+    {
+      "title": "Interactive voice assistants \u2013 Does brand credibility assuage privacy risks?",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.1016/j.jbusres.2021.10.007",
+      "url": "https://doi.org/10.1016/j.jbusres.2021.10.007",
+      "pdf_url": null
+    },
+    {
+      "title": "The Road Towards 6G: A Comprehensive Survey",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.36227/techrxiv.13382765.v1",
+      "url": "https://doi.org/10.36227/techrxiv.13382765.v1",
+      "pdf_url": "https://www.techrxiv.org/articles/preprint/The_Road_Towards_6G_A_Comprehensive_Survey/13382765/files/25914084.pdf"
+    },
+    {
+      "title": "A Literature Review of Artificial Intelligence",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.32350/air.11.01",
+      "url": "https://doi.org/10.32350/air.11.01",
+      "pdf_url": "https://journals.umt.edu.pk/index.php/UMT-AIR/article/download/2243/1035"
+    },
+    {
+      "title": "\u201CMy colleague is a robot\u201D \u2013 exploring frontline employees\u0027 willingness to work with collaborative service robots",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.1108/josm-11-2020-0406",
+      "url": "https://doi.org/10.1108/josm-11-2020-0406",
+      "pdf_url": null
+    },
+    {
+      "title": "Social Media Usage by Different Generations as a Tool for Sustainable Tourism Marketing in Society 5.0 Idea",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.3390/su13031018",
+      "url": "https://doi.org/10.3390/su13031018",
+      "pdf_url": "https://www.mdpi.com/2071-1050/13/3/1018/pdf?version=1611561128"
+    },
+    {
+      "title": "A review on the economics of artificial intelligence",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.1111/joes.12422",
+      "url": "https://doi.org/10.1111/joes.12422",
+      "pdf_url": null
+    },
+    {
+      "title": "Charting research on international luxury marketing: where are we now and where should we go next?",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.1108/imr-04-2021-0154",
+      "url": "https://doi.org/10.1108/imr-04-2021-0154",
+      "pdf_url": null
+    },
+    {
+      "title": "A New European Bauhaus for a Culture of Transversality and Sustainability",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.3390/su132111844",
+      "url": "https://doi.org/10.3390/su132111844",
+      "pdf_url": "https://www.mdpi.com/2071-1050/13/21/11844/pdf?version=1635317886"
+    },
+    {
+      "title": "Facilitating Digital Transformation in Construction\u2014A Systematic Review of the Current State of the Art",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.3389/fbuil.2021.660758",
+      "url": "https://doi.org/10.3389/fbuil.2021.660758",
+      "pdf_url": "https://www.frontiersin.org/articles/10.3389/fbuil.2021.660758/pdf"
+    },
+    {
+      "title": "Role of Artificial Intelligence in Distinct Sector: A Study",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.51983/ajcst-2021.10.1.2696",
+      "url": "https://doi.org/10.51983/ajcst-2021.10.1.2696",
+      "pdf_url": "https://ojs.trp.org.in/index.php/ajcst/article/download/2696/2177"
+    },
+    {
+      "title": "Global epidemiology, health burden and effective interventions for elevated blood pressure and hypertension",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.1038/s41569-021-00559-8",
+      "url": "https://doi.org/10.1038/s41569-021-00559-8",
+      "pdf_url": "https://www.nature.com/articles/s41569-021-00559-8.pdf"
+    },
+    {
+      "title": "The impact of 5G on the evolution of intelligent automation and industry digitization",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.1007/s12652-020-02521-x",
+      "url": "https://doi.org/10.1007/s12652-020-02521-x",
+      "pdf_url": "https://link.springer.com/content/pdf/10.1007/s12652-020-02521-x.pdf"
+    },
+    {
+      "title": "A review on second-life of Li-ion batteries: prospects, challenges, and issues",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.1016/j.energy.2021.122881",
+      "url": "https://doi.org/10.1016/j.energy.2021.122881",
+      "pdf_url": null
+    },
+    {
+      "title": "From technological development to social advance: A review of Industry 4.0 through machine learning",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.1016/j.techfore.2021.120653",
+      "url": "https://doi.org/10.1016/j.techfore.2021.120653",
+      "pdf_url": null
+    },
+    {
+      "title": "Smart Architectural Framework for Symmetrical Data Offloading in IoT",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.3390/sym13101889",
+      "url": "https://doi.org/10.3390/sym13101889",
+      "pdf_url": "https://www.mdpi.com/2073-8994/13/10/1889/pdf?version=1634019781"
+    },
+    {
+      "title": "The Use of Digital Healthcare Platforms During the COVID-19 Pandemic: the Consumer Perspective",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.5455/aim.2021.29.51-58",
+      "url": "https://doi.org/10.5455/aim.2021.29.51-58",
+      "pdf_url": null
+    },
+    {
+      "title": "Comprehensive Total Cost of Ownership Quantification for Vehicles with Different Size Classes and Powertrains",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.2172/1780970",
+      "url": "https://doi.org/10.2172/1780970",
+      "pdf_url": null
+    }
+  ]
 }

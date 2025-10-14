@@ -1,556 +1,804 @@
 {
   "items": [
     {
-      "title": "StreamingVLM: Real-Time Understanding for Infinite Video Streams",
+      "title": "BayeSN-TD: Time Delay and $H_0$ Estimation for Lensed SN H0pe",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09608v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09608v1"
+      "url": "http://arxiv.org/abs/2510.11719v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11719v1"
     },
     {
-      "title": "VITA-VLA: Efficiently Teaching Vision-Language Models to Act via Action Expert Distillation",
+      "title": "Ev4DGS: Novel-view Rendering of Non-Rigid Objects from Monocular Event Streams",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09607v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09607v1"
+      "url": "http://arxiv.org/abs/2510.11717v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11717v1"
     },
     {
-      "title": "SpaceVista: All-Scale Visual Spatial Reasoning from mm to km",
+      "title": "CodePlot-CoT: Mathematical Visual Reasoning by Thinking with Code-Driven Images",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09606v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09606v1"
+      "url": "http://arxiv.org/abs/2510.11718v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11718v1"
     },
     {
-      "title": "VisPile: A Visual Analytics System for Analyzing Multiple Text Documents With Large Language Models and Knowledge Graphs",
+      "title": "Meson-antimeson mixing",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09605v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09605v1"
+      "url": "http://arxiv.org/abs/2510.11716v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11716v1"
     },
     {
-      "title": "Some new cases of Zilber-Pink in $Y(1)^3$",
+      "title": "Point Prompting: Counterfactual Tracking with Video Diffusion Models",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09603v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09603v1"
+      "url": "http://arxiv.org/abs/2510.11715v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11715v1"
     },
     {
-      "title": "Catalog of Mock Stellar Streams in Milky Way-Like Galaxies",
+      "title": "Stochastic Homogenization of the Hamilton-Jacobi Equation on Manifolds",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09604v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09604v1"
+      "url": "http://arxiv.org/abs/2510.11714v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11714v1"
     },
     {
-      "title": "Anchoring the Universe with Characteristic Redshifts using Raychaudhuri Equation Informed Reconstruction Algorithm (REIRA)",
+      "title": "Are Large Reasoning Models Interruptible?",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09602v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09602v1"
+      "url": "http://arxiv.org/abs/2510.11713v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11713v1"
     },
     {
-      "title": "Simplified Quantum Weight Reduction with Optimal Bounds",
+      "title": "DiT360: High-Fidelity Panoramic Image Generation via Hybrid Training",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09601v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09601v1"
+      "url": "http://arxiv.org/abs/2510.11712v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11712v1"
     },
     {
-      "title": "CLARITY: Clinical Assistant for Routing, Inference, and Triage",
+      "title": "Reinforced sequential Monte Carlo for amortised sampling",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.02463v2",
-      "pdf_url": "http://arxiv.org/pdf/2510.02463v2"
+      "url": "http://arxiv.org/abs/2510.11711v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11711v1"
     },
     {
-      "title": "JWST Observations of SN 2024ggi II: NIRSpec Spectroscopy and CO Modeling at 285 and 385 Days Past the Explosion",
+      "title": "Comparing Symmetrized Determinant Neural Quantum States for the Hubbard Model",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09600v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09600v1"
+      "url": "http://arxiv.org/abs/2510.11710v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11710v1"
     },
     {
-      "title": "Prompting Test-Time Scaling Is A Strong LLM Reasoning Data Augmentation",
+      "title": "Adversarial Attacks Leverage Interference Between Features in Superposition",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09599v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09599v1"
+      "url": "http://arxiv.org/abs/2510.11709v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11709v1"
     },
     {
-      "title": "Particles with precessing spin in Kerr spacetime: analytic solutions for eccentric orbits and homoclinic motion near the equatorial plane",
+      "title": "Simultaneous Frequentist Calibration of Confidence Regions for Multiple Functionals in Constrained Inverse Problems",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09597v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09597v1"
+      "url": "http://arxiv.org/abs/2510.11708v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11708v1"
     },
     {
-      "title": "Defensive Model Expansion for Robust Bayesian Inference",
+      "title": "Chirality reversal at finite magnetic impurity strength and local signatures of a topological phase transition",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09598v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09598v1"
+      "url": "http://arxiv.org/abs/2510.11707v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11707v1"
     },
     {
-      "title": "BaNEL: Exploration Posteriors for Generative Modeling Using Only Negative Rewards",
+      "title": "Probing emergent prethermal dynamics and resonant melting on a programmable quantum simulator",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09596v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09596v1"
+      "url": "http://arxiv.org/abs/2510.11706v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11706v1"
     },
     {
-      "title": "LiveOIBench: Can Large Language Models Outperform Human Contestants in Informatics Olympiads?",
+      "title": "Limit cycles and invariant algebraic curves",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09595v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09595v1"
+      "url": "http://arxiv.org/abs/2510.11705v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11705v1"
     },
     {
-      "title": "Barbarians at the Gate: How AI is Upending Systems Research",
+      "title": "Bayesian Topological Convolutional Neural Nets",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.06189v3",
-      "pdf_url": "http://arxiv.org/pdf/2510.06189v3"
+      "url": "http://arxiv.org/abs/2510.11704v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11704v1"
     },
     {
-      "title": "MODE: Learning compositional representations of complex systems with Mixtures Of Dynamical Experts",
+      "title": "TOI-3288 b and TOI-4666 b: two gas giants transiting low-mass stars characterised by NIRPS",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09594v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09594v1"
+      "url": "http://arxiv.org/abs/2510.11703v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11703v1"
     },
     {
-      "title": "STaTS: Structure-Aware Temporal Sequence Summarization via Statistical Window Merging",
+      "title": "The Sunburst Arc with JWST. IV. The importance of interaction, turbulence, and feedback for Lyman-continuum escape",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09593v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09593v1"
+      "url": "http://arxiv.org/abs/2510.11702v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11702v1"
     },
     {
-      "title": "Mind-Paced Speaking: A Dual-Brain Approach to Real-Time Reasoning in Spoken Language Models",
+      "title": "Demystifying Reinforcement Learning in Agentic Reasoning",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09592v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09592v1"
+      "url": "http://arxiv.org/abs/2510.11701v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11701v1"
     },
     {
-      "title": "CarbonX: An Open-Source Tool for Computational Decarbonization Using Time Series Foundation Models",
+      "title": "Revisiting the limits on dark matter annihilation cross-section and decay lifetime in light of electron and positron fluxes",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.01521v2",
-      "pdf_url": "http://arxiv.org/pdf/2510.01521v2"
+      "url": "http://arxiv.org/abs/2510.11700v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11700v1"
     },
     {
-      "title": "A Multilingual Python Programming Language",
+      "title": "Gamma-ray Orbital Modulation in Spider Pulsars: Three Discoveries and a Universal Modulated Fraction",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09591v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09591v1"
+      "url": "http://arxiv.org/abs/2510.11699v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11699v1"
     },
     {
-      "title": "Ranking Policies Under Loss Aversion and Inequality Aversion",
+      "title": "The most probable order of a random permutation",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09590v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09590v1"
+      "url": "http://arxiv.org/abs/2510.11698v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11698v1"
     },
     {
-      "title": "Minimizing the Weighted Makespan with Restarts on a Single Machine",
+      "title": "A Fast-Converging Decentralized Approach to the Weighted Minimum Vertex Cover Problem",
       "year": "2025",
       "venue": "arXiv",
+      "doi": "10.1109/ICDCSW63273.2025.00025",
+      "url": "http://arxiv.org/abs/2510.11697v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11697v1"
+    },
+    {
+      "title": "QeRL: Beyond Efficiency -- Quantization-enhanced Reinforcement Learning for LLMs",
+      "year": "2025",
+      "venue": "arXiv",
+      "doi": null,
+      "url": "http://arxiv.org/abs/2510.11696v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11696v1"
+    },
+    {
+      "title": "When Agents Trade: Live Multi-Market Trading Benchmark for LLM Agents",
+      "year": "2025",
+      "venue": "arXiv",
+      "doi": null,
+      "url": "http://arxiv.org/abs/2510.11695v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11695v1"
+    },
+    {
+      "title": "Operand Quant: A Single-Agent Architecture for Autonomous Machine Learning Engineering",
+      "year": "2025",
+      "venue": "arXiv",
+      "doi": null,
+      "url": "http://arxiv.org/abs/2510.11694v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11694v1"
+    },
+    {
+      "title": "Scaling Language-Centric Omnimodal Representation Learning",
+      "year": "2025",
+      "venue": "arXiv",
+      "doi": null,
+      "url": "http://arxiv.org/abs/2510.11693v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11693v1"
+    },
+    {
+      "title": "Analysis of the Geometric Heat Flow Equation: Computing Geodesics in Real-Time with Convergence Guarantees",
+      "year": "2025",
+      "venue": "arXiv",
+      "doi": null,
+      "url": "http://arxiv.org/abs/2510.11692v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11692v1"
+    },
+    {
+      "title": "Tight Regret Upper and Lower Bounds for Optimistic Hedge in Two-Player Zero-Sum Games",
+      "year": "2025",
+      "venue": "arXiv",
+      "doi": null,
+      "url": "http://arxiv.org/abs/2510.11691v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11691v1"
+    },
+    {
+      "title": "Diffusion Transformers with Representation Autoencoders",
+      "year": "2025",
+      "venue": "arXiv",
+      "doi": null,
+      "url": "http://arxiv.org/abs/2510.11690v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11690v1"
+    },
+    {
+      "title": "Phys2Real: Fusing VLM Priors with Interactive Online Adaptation for Uncertainty-Aware Sim-to-Real Manipulation",
+      "year": "2025",
+      "venue": "arXiv",
+      "doi": null,
+      "url": "http://arxiv.org/abs/2510.11689v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11689v1"
+    },
+    {
+      "title": "PACEbench: A Framework for Evaluating Practical AI Cyber-Exploitation Capabilities",
+      "year": "2025",
+      "venue": "arXiv",
+      "doi": null,
+      "url": "http://arxiv.org/abs/2510.11688v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11688v1"
+    },
+    {
+      "title": "Beyond \u0027Templates\u0027: Category-Agnostic Object Pose, Size, and Shape Estimation from a Single View",
+      "year": "2025",
+      "venue": "arXiv",
+      "doi": null,
+      "url": "http://arxiv.org/abs/2510.11687v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11687v1"
+    },
+    {
+      "title": "Representation-Based Exploration for Language Models: From Test-Time to Post-Training",
+      "year": "2025",
+      "venue": "arXiv",
+      "doi": null,
+      "url": "http://arxiv.org/abs/2510.11686v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11686v1"
+    },
+    {
+      "title": "Hybridization of second-order gravitational self-force and numerical relativity waveforms for quasi-circular and non-spinning black hole binaries",
+      "year": "2025",
+      "venue": "arXiv",
+      "doi": null,
+      "url": "http://arxiv.org/abs/2510.11685v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11685v1"
+    },
+    {
+      "title": "Ultra-Faint Milky Way Satellites Discovered in Carina, Phoenix, and Telescopium with DELVE Data Release 3",
+      "year": "2025",
+      "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09589v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09589v1"
+      "url": "http://arxiv.org/abs/2510.11684v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11684v1"
     },
     {
-      "title": "On a sequence of singular ball quotient surfaces on the line $K^2=9\u03C7-18$",
+      "title": "Boundary-Guided Policy Optimization for Memory-efficient RL of Diffusion Large Language Models",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09588v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09588v1"
+      "url": "http://arxiv.org/abs/2510.11683v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11683v1"
     },
     {
-      "title": "Ab initio study on photocatalytic properties of PtSSe-WXY Janus heterostructures",
+      "title": "Ego-Vision World Model for Humanoid Contact Planning",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09587v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09587v1"
+      "url": "http://arxiv.org/abs/2510.11682v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11682v1"
     },
     {
-      "title": "Vision Language Models: A Survey of 26K Papers",
+      "title": "The Magic Barrier before Thermalization",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09586v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09586v1"
+      "url": "http://arxiv.org/abs/2510.11681v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11681v1"
     },
     {
-      "title": "From Birdwatch to Community Notes, from Twitter to X: four years of community-based content moderation",
+      "title": "Marcus Theory and The Condon Approximation Revisited II: The Horror of Triplet Energy Transfer",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09585v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09585v1"
+      "url": "http://arxiv.org/abs/2510.11680v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11680v1"
     },
     {
-      "title": "Untangling Component Imbalance in Hybrid Linear Attention Conversion Methods",
+      "title": "Observation of ballistic plasma and memory in high-energy gauge theory dynamics",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.05901v2",
-      "pdf_url": "http://arxiv.org/pdf/2510.05901v2"
+      "url": "http://arxiv.org/abs/2510.11679v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11679v1"
     },
     {
-      "title": "The Hurwitz problem for abelian differentials",
+      "title": "Spinon Mediation of Witness-Spin Dynamics and Ground State in Herbertsmithite",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09584v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09584v1"
+      "url": "http://arxiv.org/abs/2510.11678v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11678v1"
     },
     {
-      "title": "Verbalized Sampling: How to Mitigate Mode Collapse and Unlock LLM Diversity",
+      "title": "Chronologically Consistent Generative AI",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.01171v3",
-      "pdf_url": "http://arxiv.org/pdf/2510.01171v3"
+      "url": "http://arxiv.org/abs/2510.11677v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11677v1"
     },
     {
-      "title": "FSP-DETR: Few-Shot Prototypical Parasitic Ova Detection",
+      "title": "Accelerated stochastic first-order method for convex optimization under heavy-tailed noise",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09583v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09583v1"
+      "url": "http://arxiv.org/abs/2510.11676v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11676v1"
     },
     {
-      "title": "Cohomology theories in the moduli of ring stacks",
+      "title": "FACE: Faithful Automatic Concept Extraction",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09582v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09582v1"
+      "url": "http://arxiv.org/abs/2510.11675v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11675v1"
     },
     {
-      "title": "Optimal Binning for Small-Angle Neutron Scattering Data Using the Freedman-Diaconis Rule",
+      "title": "GraviGUT unification with revisited Pati-Salam model",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09581v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09581v1"
+      "url": "http://arxiv.org/abs/2510.11674v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11674v1"
     },
     {
-      "title": "GraphMERT: Efficient and Scalable Distillation of Reliable Knowledge Graphs from Unstructured Data",
+      "title": "Integral Matrices of Fixed Rank over Number Fields",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09580v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09580v1"
+      "url": "http://arxiv.org/abs/2510.11673v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11673v1"
     },
     {
-      "title": "The impact of plasma turbulence on atomic reaction rates in detached divertors",
+      "title": "Some Properties of Homology and Exactness of Nomura\u0027s Homology Sequences in a Grandis Homological Category",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09579v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09579v1"
+      "url": "http://arxiv.org/abs/2510.11672v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11672v1"
     },
     {
-      "title": "Three Birds with One Stone: Improving Performance, Convergence, and System Throughput with Nest",
+      "title": "Finite-temperature phase diagram and collective modes of coherently coupled Bose mixtures",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09578v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09578v1"
+      "url": "http://arxiv.org/abs/2510.11671v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11671v1"
     },
     {
-      "title": "Dyna-Mind: Learning to Simulate from Experience for Better AI Agents",
+      "title": "Understanding the interplay of collagen and myocyte adaptation in cardiac volume overload: a multi-constituent growth and remodeling framework",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09577v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09577v1"
+      "url": "http://arxiv.org/abs/2510.11670v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11670v1"
     },
     {
-      "title": "On elastic and non-elastic wave superpositions for the Euler system",
+      "title": "Surfaces and Hypersurfaces with Prescribed Radial Mean Curvature",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09576v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09576v1"
+      "url": "http://arxiv.org/abs/2510.11669v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11669v1"
     },
     {
-      "title": "Certifying Quantum Gates via Automata Advantage",
+      "title": "Bounded powers of edge ideals: Gorenstein polytopes",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09575v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09575v1"
+      "url": "http://arxiv.org/abs/2510.11668v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11668v1"
     },
     {
-      "title": "Zero-shot Structure Learning and Planning for Autonomous Robot Navigation using Active Inference",
+      "title": "Loop functions of sunset diagrams in 2\u002B1 space-time dimensions",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09574v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09574v1"
+      "url": "http://arxiv.org/abs/2510.08704v2",
+      "pdf_url": "http://arxiv.org/pdf/2510.08704v2"
     },
     {
-      "title": "Power Cable Radiation: A Novel Approach to Underground Mining Connectivity",
+      "title": "Verification of Convergent-Divergent Nozzle Designs in Propulsion Aerospace Applications",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09573v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09573v1"
+      "url": "http://arxiv.org/abs/2510.11667v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11667v1"
     },
     {
-      "title": "Yukawa interactions in Quantum Gravity",
+      "title": "Leaky Wave Antennas for Next Generation Wireless Applications in sub-THz Frequencies: Current Status and Research Challenges",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09572v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09572v1"
+      "url": "http://arxiv.org/abs/2510.11666v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11666v1"
     },
     {
-      "title": "Deep uGMRT observations for enhanced calibration of 21 cm arrays -- I. First image and source catalogue",
+      "title": "The Thrust Distribution at NNLO\u002BNNLL in Higgs Decays to Quarks and Gluons",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09571v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09571v1"
+      "url": "http://arxiv.org/abs/2510.11665v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11665v1"
     },
     {
-      "title": "Differential Analysis of Pseudo Haptic Feedback: Novel Comparative Study of Visual and Auditory Cue Integration for Psychophysical Evaluation",
+      "title": "Proprioceptive Misestimation of Hand Speed",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09570v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09570v1"
+      "url": "http://arxiv.org/abs/2510.11664v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11664v1"
     },
     {
-      "title": "SN 2021lwz: Another Exotic Luminous and Fast Evolving Optical Type Ic Broad-Lined Supernova ?",
+      "title": "The vector potential of a steady azimuthal current density. Once again",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09569v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09569v1"
+      "url": "http://arxiv.org/abs/2510.11663v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11663v1"
     },
     {
-      "title": "Galaxy Underdensities Host the Clearest IGM Ly$\u03B1$ Transmission and Indicate Anisotropic Reionization",
+      "title": "A family of interaction energy minimizers supported on two intervals",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09568v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09568v1"
+      "url": "http://arxiv.org/abs/2510.11662v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11662v1"
     },
     {
-      "title": "Safe, Untrusted, \u0022Proof-Carrying\u0022 AI Agents: toward the agentic lakehouse",
+      "title": "SR-Scientist: Scientific Equation Discovery With Agentic AI",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09567v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09567v1"
+      "url": "http://arxiv.org/abs/2510.11661v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11661v1"
     },
     {
-      "title": "Understanding Ice Crystal Habit Diversity with Self-Supervised Learning",
+      "title": "ManiAgent: An Agentic Framework for General Robotic Manipulation",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2509.07688v2",
-      "pdf_url": "http://arxiv.org/pdf/2509.07688v2"
+      "url": "http://arxiv.org/abs/2510.11660v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11660v1"
     },
     {
-      "title": "Automated Evolutionary Optimization for Resource-Efficient Neural Network Training",
+      "title": "Compositional difference-in-differences for categorical outcomes",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09566v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09566v1"
+      "url": "http://arxiv.org/abs/2510.11659v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11659v1"
     },
     {
-      "title": "Unveiling dynamical quantum error correcting codes via non-invertible symmetries",
+      "title": "Automatically Generating Questions About Scratch Programs",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09565v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09565v1"
+      "url": "http://arxiv.org/abs/2510.11658v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11658v1"
     },
     {
-      "title": "Architecture Induces Structural Invariant Manifolds of Neural Network Training Dynamics",
+      "title": "An Eulerian Perspective on Straight-Line Sampling",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09564v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09564v1"
+      "url": "http://arxiv.org/abs/2510.11657v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11657v1"
     },
     {
-      "title": "A study of 2-periodic weft-knitted textiles using the theory of knots and links",
+      "title": "Field Theoretic Approach to Interacting Two Body Tunneling",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.08384v2",
-      "pdf_url": "http://arxiv.org/pdf/2510.08384v2"
+      "url": "http://arxiv.org/abs/2510.11656v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11656v1"
     },
     {
-      "title": "Low-redshift constraints on structure growth from CMB lensing tomography",
+      "title": "Kernels of Brauer characters and Isaacs\u0027 partial characters",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09563v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09563v1"
+      "url": "http://arxiv.org/abs/2510.11655v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11655v1"
     },
     {
-      "title": "Generalized Taylor\u0027s Law for Dependent and Heterogeneous Heavy-Tailed Data",
+      "title": "FinVet: A Collaborative Framework of RAG and External Fact-Checking Agents for Financial Misinformation Detection",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09562v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09562v1"
+      "url": "http://arxiv.org/abs/2510.11654v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11654v1"
     },
     {
-      "title": "TC-LoRA: Temporally Modulated Conditional LoRA for Adaptive Diffusion Control",
+      "title": "MATH-Beyond: A Benchmark for RL to Expand Beyond the Base Model",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09561v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09561v1"
+      "url": "http://arxiv.org/abs/2510.11653v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11653v1"
     },
     {
-      "title": "Two-photon rubidium clock detecting 776~nm fluorescence",
+      "title": "ACADREASON: Exploring the Limits of Reasoning Models with Academic Research Problems",
       "year": "2025",
       "venue": "arXiv",
-      "doi": "10.1364/OE.513974",
-      "url": "http://arxiv.org/abs/2510.09560v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09560v1"
+      "doi": null,
+      "url": "http://arxiv.org/abs/2510.11652v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11652v1"
+    },
+    {
+      "title": "Inverse Portfolio Optimization with Synthetic Investor Data: Recovering Risk Preferences under Uncertainty",
+      "year": "2025",
+      "venue": "arXiv",
+      "doi": null,
+      "url": "http://arxiv.org/abs/2510.06986v2",
+      "pdf_url": "http://arxiv.org/pdf/2510.06986v2"
+    },
+    {
+      "title": "On the integral simplicial volume of cyclic covers of mapping tori",
+      "year": "2025",
+      "venue": "arXiv",
+      "doi": null,
+      "url": "http://arxiv.org/abs/2510.11651v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11651v1"
+    },
+    {
+      "title": "InfiniHuman: Infinite 3D Human Creation with Precise Control",
+      "year": "2025",
+      "venue": "arXiv",
+      "doi": "10.1145/3757377.3763815",
+      "url": "http://arxiv.org/abs/2510.11650v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11650v1"
+    },
+    {
+      "title": "PhySIC: Physically Plausible 3D Human-Scene Interaction and Contact from a Single Image",
+      "year": "2025",
+      "venue": "arXiv",
+      "doi": "10.1145/3757377.3763862",
+      "url": "http://arxiv.org/abs/2510.11649v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11649v1"
+    },
+    {
+      "title": "Fujita-type results for parabolic equations with Hartree-type nonlinearities",
+      "year": "2025",
+      "venue": "arXiv",
+      "doi": null,
+      "url": "http://arxiv.org/abs/2510.11648v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11648v1"
     },
     {
-      "title": "Direct observation of the X-ray counterpart of the H\u03B1 filaments and of the sloshing spiral in the Perseus galaxy cluster",
+      "title": "IVEBench: Modern Benchmark Suite for Instruction-Guided Video Editing Assessment",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09559v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09559v1"
+      "url": "http://arxiv.org/abs/2510.11647v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11647v1"
+    },
+    {
+      "title": "Revolutionizing e-health: the transformative role of AI-powered hybrid chatbots in healthcare solutions",
+      "year": "2025",
+      "venue": null,
+      "doi": "https://doi.org/10.3389/fpubh.2025.1530799",
+      "url": "https://doi.org/10.3389/fpubh.2025.1530799",
+      "pdf_url": null
+    },
+    {
+      "title": "Generative artificial intelligence use in evidence synthesis: A systematic review",
+      "year": "2025",
+      "venue": null,
+      "doi": "https://doi.org/10.1017/rsm.2025.16",
+      "url": "https://doi.org/10.1017/rsm.2025.16",
+      "pdf_url": null
+    },
+    {
+      "title": "AI Tools in Society: Impacts on Cognitive Offloading and the Future of Critical Thinking",
+      "year": "2025",
+      "venue": null,
+      "doi": "https://doi.org/10.3390/soc15010006",
+      "url": "https://doi.org/10.3390/soc15010006",
+      "pdf_url": null
+    },
+    {
+      "title": "Harnessing the AI/ML in Drug and Biological Products Discovery and Development: The Regulatory Perspective",
+      "year": "2025",
+      "venue": null,
+      "doi": "https://doi.org/10.3390/ph18010047",
+      "url": "https://doi.org/10.3390/ph18010047",
+      "pdf_url": null
+    },
+    {
+      "title": "Artificial Intelligence of Things (AIoT) Advances in Aquaculture: A Review",
+      "year": "2025",
+      "venue": null,
+      "doi": "https://doi.org/10.3390/pr13010073",
+      "url": "https://doi.org/10.3390/pr13010073",
+      "pdf_url": null
+    },
+    {
+      "title": "Unmanned Aerial Vehicles for Real-Time Vegetation Monitoring in Antarctica: A Review",
+      "year": "2025",
+      "venue": null,
+      "doi": "https://doi.org/10.3390/rs17020304",
+      "url": "https://doi.org/10.3390/rs17020304",
+      "pdf_url": null
     },
     {
-      "title": "AutoPR: Let\u0027s Automate Your Academic Promotion!",
+      "title": "BridgeCode: A Dual Speech Representation Paradigm for Autoregressive Zero-Shot Text-to-Speech Synthesis",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09558v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09558v1"
+      "url": "http://arxiv.org/abs/2510.11646v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11646v1"
     },
     {
-      "title": "Doc2Query\u002B\u002B: Topic-Coverage based Document Expansion and its Application to Dense Retrieval via Dual-Index Fusion",
+      "title": "The information content of points on lines and $k$-plane extensions",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09557v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09557v1"
+      "url": "http://arxiv.org/abs/2510.11645v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11645v1"
     },
     {
-      "title": "WUGNECTIVES: Novel Entity Inferences of Language Models from Discourse Connectives",
+      "title": "Applying Normalizing Flows for spin correlations reconstruction in associated top-quark pair and dark matter production",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09556v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09556v1"
+      "url": "http://arxiv.org/abs/2510.11644v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11644v1"
     },
     {
-      "title": "A Comprehensive Evaluation of Multilingual Chain-of-Thought Reasoning: Performance, Consistency, and Faithfulness Across Languages",
+      "title": "Scattering and Absorption of Standard Model Fields by Brane-Localized Schwarzschild--de Sitter Black Holes",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09555v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09555v1"
+      "url": "http://arxiv.org/abs/2510.11643v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11643v1"
     },
     {
-      "title": "scellop: A Scalable Redesign of Cell Population Plots for Single-Cell Data",
+      "title": "Measuring Physical-World Privacy Awareness of Large Language Models: An Evaluation Benchmark",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09554v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09554v1"
+      "url": "http://arxiv.org/abs/2510.02356v2",
+      "pdf_url": "http://arxiv.org/pdf/2510.02356v2"
+    },
+    {
+      "title": "Artificial Intelligence and Finance: A bibliometric review on the Trends, Influences, and Research Directions",
+      "year": "2025",
+      "venue": null,
+      "doi": "https://doi.org/10.12688/f1000research.160959.1",
+      "url": "https://doi.org/10.12688/f1000research.160959.1",
+      "pdf_url": null
+    },
+    {
+      "title": "Artificial Intelligence and its Perspectives in Dentistry: A Review",
+      "year": "2025",
+      "venue": null,
+      "doi": "https://doi.org/10.36348/sjodr.2025.v10i01.003",
+      "url": "https://doi.org/10.36348/sjodr.2025.v10i01.003",
+      "pdf_url": null
     },
     {
-      "title": "Hierarchical Indexing with Knowledge Enrichment for Multilingual Video Corpus Retrieval",
+      "title": "Competing forces of polarization and confinement generate cellular chirality in a minimal model",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09553v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09553v1"
+      "url": "http://arxiv.org/abs/2510.11642v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11642v1"
+    },
+    {
+      "title": "Triaxiality and shape dynamics in $^{70}$Ge",
+      "year": "2025",
+      "venue": "arXiv",
+      "doi": "10.1103/cmks-jst1",
+      "url": "http://arxiv.org/abs/2510.11641v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11641v1"
+    },
+    {
+      "title": "AI Chatbots and Cognitive Control: Enhancing Executive Functions Through Chatbot Interactions: A Systematic Review",
+      "year": "2025",
+      "venue": null,
+      "doi": "https://doi.org/10.3390/brainsci15010047",
+      "url": "https://doi.org/10.3390/brainsci15010047",
+      "pdf_url": null
+    },
+    {
+      "title": "Reinforcement Fine-Tuning Powers Reasoning Capability of Multimodal\n  Large Language Models",
+      "year": "2025",
+      "venue": null,
+      "doi": "https://doi.org/10.48550/arxiv.2505.18536",
+      "url": "http://arxiv.org/abs/2505.18536",
+      "pdf_url": "http://arxiv.org/pdf/2505.18536"
+    },
+    {
+      "title": "Large Language Model Evaluation Criteria Framework in Healthcare: Fuzzy MCDM Approach",
+      "year": "2025",
+      "venue": null,
+      "doi": "https://doi.org/10.1007/s42979-024-03533-6",
+      "url": "https://doi.org/10.1007/s42979-024-03533-6",
+      "pdf_url": null
+    },
+    {
+      "title": "Summon a demon and bind it: A grounded theory of LLM red teaming",
+      "year": "2025",
+      "venue": null,
+      "doi": "https://doi.org/10.1371/journal.pone.0314658",
+      "url": "https://doi.org/10.1371/journal.pone.0314658",
+      "pdf_url": null
     },
     {
-      "title": "Degree 4 cohomological invariants of algebraic tori",
+      "title": "A new characterization of (pre)liminary C*-algebras",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09552v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09552v1"
+      "url": "http://arxiv.org/abs/2509.20980v4",
+      "pdf_url": "http://arxiv.org/pdf/2509.20980v4"
     },
     {
-      "title": "Titans Revisited: A Lightweight Reimplementation and Critical Analysis of a Test-Time Memory Model",
+      "title": "OneRec-Think: In-Text Reasoning for Generative Recommendation",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09551v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09551v1"
+      "url": "http://arxiv.org/abs/2510.11639v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11639v1"
     },
     {
-      "title": "Orientational Order of Phenyl Rotors on Triangular Platforms on Ag and Au(111)",
+      "title": "Continual Release of Densest Subgraphs: Privacy Amplification \u0026 Sublinear Space via Subsampling",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09550v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09550v1"
+      "url": "http://arxiv.org/abs/2510.11640v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11640v1"
     },
     {
-      "title": "Anomalous Diffusion in a Percolating Disordered Dipolar Spin Ensemble",
+      "title": "Canonical Ramsey: triangles, rectangles and beyond",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09549v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09549v1"
+      "url": "http://arxiv.org/abs/2510.11638v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11638v1"
     },
     {
-      "title": "Mapping the moir\u00E9 potential in multi-layer rhombohedral graphene",
+      "title": "StatTestCalculator: A New General Tool for Statistical Analysis in High Energy Physics",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09548v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09548v1"
+      "url": "http://arxiv.org/abs/2510.11637v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11637v1"
     },
     {
-      "title": "Theoretical filters for shift-symmetric Horndeski gravities",
+      "title": "LRQ-Solver: A Transformer-Based Neural Operator for Fast and Accurate Solving of Large-scale 3D PDEs",
       "year": "2025",
       "venue": "arXiv",
       "doi": null,
-      "url": "http://arxiv.org/abs/2510.09547v1",
-      "pdf_url": "http://arxiv.org/pdf/2510.09547v1"
+      "url": "http://arxiv.org/abs/2510.11636v1",
+      "pdf_url": "http://arxiv.org/pdf/2510.11636v1"
     }
   ]
 }
