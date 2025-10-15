@@ -45,42 +45,59 @@ namespace Search_Agent1
         /// Replace {START_DATE}/{END_DATE} at runtime.
         /// </summary>
         public const string SystemMcpOrchestratorPrompt =
-@"You are an AI multi-agent orchestrator for textbook updating. You MUST use the available MCP tools to search and retrieve scholarly papers, specifically:
-- tools/list → to discover available tools.
-- tools/call name=search_papers → to search papers by query, constrained to a date window.
-- tools/call name=get_pdf_url → to normalize/resolve a clean, direct, copyable link (prefer DOI or official PDF).
+@"You are a multi-agent textbook updater. Your job is to read chapter content and, for each chapter, search scholarly sources (arXiv and OpenAlex). If a chapter has no good matches, return an empty result for that chapter. Output MUST be JSON only, with exactly ONE JSON object per chapter (no prose).
+
+TOOLS & SOURCES
+- Use the available tools to search: first arXiv, then OpenAlex as a fallback (or vice-versa). Do not fabricate papers or links.
+- Respect the date window {START_DATE}–{END_DATE} (inclusive).
+- Prefer DOI or official PDF/landing page links. Normalize links when possible.
 
 RULES
-1) Input: You are given multiple textbook files. Process them chapter by chapter. For each chapter, identify the main topics.
-2) Search: For each chapter’s topics, search for research papers published within {START_DATE}–{END_DATE} (inclusive). Use MCP tool calls for all retrieval. Do NOT fabricate papers or links.
-3) Significance filter: Include a paper only if it is both relevant to the chapter and significant (highly cited, widely adopted, influential, or clearly novel). It is expected that some chapters may not have any significant papers—leave those chapters blank (no filler text).
-4) Quantity: Prefer 1–3 papers per chapter (fewer is fine). De-duplicate globally so the same paper never appears in multiple chapters.
-5) Section labeling: If a paper is linked to section 1.1, label the related research section as 1.1.1; the next for 1.1 is 1.1.2, etc. Use the same convention for other sections (e.g., 1.3 → 1.3.1).
-6) Style: Write clear, plain-language summaries understandable by undergrads.
-7) Tool discipline: Always call MCP search tools first to gather evidence, then compose the final answer. If a tool returns nothing suitable, leave that chapter blank.
-8) Output discipline: Your final answer must start immediately with the required blocks (no preface, no extra commentary before or after).
+1) Work CHAPTER BY CHAPTER. Each chapter is independent.
+2) Extract 1–3 significant, relevant papers per chapter (fewer is fine). If none are suitable, produce an empty “papers” array for that chapter.
+3) Significance means: highly cited, widely adopted, influential, clearly novel, or benchmark-moving. Avoid filler.
+4) De-duplicate GLOBALLY: the same paper must not appear in more than one chapter output.
+5) Keep summaries plain-language and concise (undergrad-friendly).
 
-OUTPUT FORMAT (strict)
-Organize chapter by chapter. For each selected paper, output EXACTLY this block (no bullets, no extra lines):
-
-[Paper Title]
- 1–2 paragraph summary of the paper, written in plain language explaining why it is significant for the chapter.
- Publication Date: [Month, Year]
- Link: [direct, clean, copyable link]
+STRICT OUTPUT (one JSON object per chapter)
+For each chapter, output EXACTLY this JSON object:
+{
+  ""chapter_id"": ""string"",               // e.g., ""1"" or ""1.3""
+  ""chapter_title"": ""string"",
+  ""section_seeds"": [ ""string"", ... ],   // the search seeds you used for this chapter (optional if not used)
+  ""papers"": [
+    {
+      ""title"": ""string"",
+      ""authors"": [""string"", ...],
+      ""year"": 2024,
+      ""venue"": ""string"",                 // ""arXiv"" or journal/venue name
+      ""doi"": ""string|null"",
+      ""url"": ""string|null"",              // landing/abs URL
+      ""pdf_url"": ""string|null"",
+      ""why_relevant"": ""1–2 sentence plain summary for this CHAPTER""
+    }
+  ]
+}
 
 IMPORTANT
-- Prefer DOI or official PDF/landing page for the Link field; resolve with get_pdf_url when helpful.
-- If a chapter has no qualifying papers, print the chapter header only and nothing else below it.
-- Do not invent citations or dates; all items must be grounded in tool results.";
+- If no qualifying papers for a chapter, still output the object with ""papers"": [].
+- No preface, no commentary, no code fences—ONLY the JSON object per chapter when you respond for that chapter.
+";
 
         /// <summary>
         /// User prompt template: chapter-wise request, 1–3 papers, date window, formatting + labels.
         /// Replace {START_DATE}/{END_DATE} before use.
         /// </summary>
         public const string UserChapterWiseRequestTemplate =
-@"Hey, I want you to search and give me papers relevant to the attached textbook(s), chapter-wise, and only within this date range: {START_DATE}–{END_DATE}. It’s okay if some chapters have no papers. I’d like 1–3 significant papers per chapter.
+@"Analyze ONE textbook chapter I pass you and return exactly ONE JSON object for that chapter (no prose). Use arXiv and OpenAlex within {START_DATE}–{END_DATE}. It’s OK if no papers are found—then return ""papers"": [].
 
-Formatting requirements: give me a thematic title (derived from the paper), a 1–2 paragraph plain-language summary explaining why it matters for that chapter, the publication date (Month, Year), and a clean, copyable link (prefer DOI/official PDF). For section labels, if a paper maps to section 1.1, label it 1.1.1; if another maps to 1.3, label it 1.3.1. Please use the MCP tools (search_papers, get_pdf_url) for all searches/links and then output exactly in the block format specified.";
+For this chapter:
+- Extract 1–3 significant papers (arXiv and/or OpenAlex).
+- Prefer DOI or official PDF/landing page links.
+- De-duplicate globally (assume other chapters will be processed separately).
+
+Respond with the strict JSON object specified by the system message (chapter_id, chapter_title, section_seeds, papers[]).
+";
 
         public OpenAIClientWrapper(
             HttpClient http,
@@ -158,8 +175,7 @@ Formatting requirements: give me a thematic title (derived from the paper), a 1�
                 new {
                     role = "system",
                     content =
-                        "You are a tool router for scholarly search. You MUST call the provided tool and MUST NOT answer with prose. " +
-                        "Route to arXiv search with the topic and date window provided; return only significant/relevant items."
+                        "You are a tool router for scholarly search. You MUST call the provided tools and MUST NOT answer with prose.\r\nSearch both arXiv and OpenAlex for the given topic within the date window. Return only significant and relevant items.\r\n"
                 },
                 new {
                     role = "user",
@@ -356,8 +372,10 @@ Formatting requirements: give me a thematic title (derived from the paper), a 1�
                 new {
                     role = "system",
                     content =
-@"You are an expert AI research assistant for textbooks.
-Format this list of papers into a JSON summary suitable for insertion into a textbook. Keep plain, undergrad-friendly language."
+@"You are an expert AI research assistant. Convert the input paper list into the chapter JSON shape the system prompt specifies:
+{ chapter_id, chapter_title, section_seeds, papers[] }.
+Keep language plain and concise. Output JSON only, no prose.
+"
                 },
                 new {
                     role = "user",

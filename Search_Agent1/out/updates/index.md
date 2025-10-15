@@ -3,11 +3,11 @@
 ## Chapter 1. Introduction to Artificial Intelligence (window: 2025)
 [**chapter-1.json**](./chapter-1.json)
 
-- **BayeSN-TD: Time Delay and $H_0$ Estimation for Lensed SN H0pe** (2025) — _arXiv_ — [link](http://arxiv.org/pdf/2510.11719v1)
-- **Ev4DGS: Novel-view Rendering of Non-Rigid Objects from Monocular Event Streams** (2025) — _arXiv_ — [link](http://arxiv.org/pdf/2510.11717v1)
-- **CodePlot-CoT: Mathematical Visual Reasoning by Thinking with Code-Driven Images** (2025) — _arXiv_ — [link](http://arxiv.org/pdf/2510.11718v1)
-- **Meson-antimeson mixing** (2025) — _arXiv_ — [link](http://arxiv.org/pdf/2510.11716v1)
-- **Point Prompting: Counterfactual Tracking with Video Diffusion Models** (2025) — _arXiv_ — [link](http://arxiv.org/pdf/2510.11715v1)
+- **Prethermal gauge structure and surface growth in $\mathbb{Z}_2$ lattice gauge theories** (2025) — _arXiv_ — [link](http://arxiv.org/pdf/2510.12800v1)
+- **DeepMMSearch-R1: Empowering Multimodal LLMs in Multimodal Web Search** (2025) — _arXiv_ — [link](http://arxiv.org/pdf/2510.12801v1)
+- **Consistent truncation and generalized duality based on exceptional generalized cosets** (2025) — _arXiv_ — [link](http://arxiv.org/pdf/2510.12799v1)
+- **The Linearized Einstein Equations with Sources on Compact Riemannian Manifolds With Boundary** (2025) — _arXiv_ — [link](http://arxiv.org/pdf/2510.12797v1)
+- **Detect Anything via Next Point Prediction** (2025) — _arXiv_ — [link](http://arxiv.org/pdf/2510.12798v1)
 
 ## Chapter 2. AI Technologies and the ML (window: 2025)
 [**chapter-2.json**](./chapter-2.json)

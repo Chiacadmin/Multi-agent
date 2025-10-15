@@ -441,6 +441,14 @@
       "pdf_url": null
     },
     {
+      "title": "Corrosion challenges towards a sustainable society",
+      "year": "2022",
+      "venue": null,
+      "doi": "https://doi.org/10.1002/maco.202213140",
+      "url": "https://doi.org/10.1002/maco.202213140",
+      "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/maco.202213140"
+    },
+    {
       "title": "Teaching and Learning with Technology: Effectiveness of ICT Integration in Schools",
       "year": "2022",
       "venue": null,
@@ -551,14 +559,6 @@
       "doi": "https://doi.org/10.3390/educsci11110664",
       "url": "https://doi.org/10.3390/educsci11110664",
       "pdf_url": "https://www.mdpi.com/2227-7102/11/11/664/pdf?version=1634753738"
-    },
-    {
-      "title": "Final Report and Recommendations",
-      "year": "2021",
-      "venue": null,
-      "doi": "https://doi.org/10.3998/mpub.12230588",
-      "url": "https://doi.org/10.3998/mpub.12230588",
-      "pdf_url": "https://www.fulcrum.org/ebooks/m326m4101/download?locale=en"
     },
     {
       "title": "Expert elicitation survey predicts 37% to 49% declines in wind energy costs by 2050",
@@ -721,20 +721,20 @@
       "pdf_url": null
     },
     {
-      "title": "A New European Bauhaus for a Culture of Transversality and Sustainability",
-      "year": "2021",
-      "venue": null,
-      "doi": "https://doi.org/10.3390/su132111844",
-      "url": "https://doi.org/10.3390/su132111844",
-      "pdf_url": "https://www.mdpi.com/2071-1050/13/21/11844/pdf?version=1635317886"
-    },
-    {
       "title": "Facilitating Digital Transformation in Construction\u2014A Systematic Review of the Current State of the Art",
       "year": "2021",
       "venue": null,
       "doi": "https://doi.org/10.3389/fbuil.2021.660758",
       "url": "https://doi.org/10.3389/fbuil.2021.660758",
       "pdf_url": "https://www.frontiersin.org/articles/10.3389/fbuil.2021.660758/pdf"
+    },
+    {
+      "title": "A New European Bauhaus for a Culture of Transversality and Sustainability",
+      "year": "2021",
+      "venue": null,
+      "doi": "https://doi.org/10.3390/su132111844",
+      "url": "https://doi.org/10.3390/su132111844",
+      "pdf_url": "https://www.mdpi.com/2071-1050/13/21/11844/pdf?version=1635317886"
     },
     {
       "title": "Role of Artificial Intelligence in Distinct Sector: A Study",
