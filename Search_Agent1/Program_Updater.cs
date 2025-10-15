@@ -67,7 +67,7 @@ internal static class Program_Updater
         Console.WriteLine($"[Updater] Using chapters: {chapterMd}");
         Console.WriteLine($"[Updater] Output dir    : {outDir}");
         Console.WriteLine($"[Updater] Window        : {startStr} .. {endStr}");
-        Console.WriteLine("[Updater] Strategy      : MCP-first, arXiv fallback | One JSON per chapter | Global exclusivity");
+        Console.WriteLine("[Updater] Strategy      : MCP-first (arXiv only) | One JSON per chapter | Global exclusivity");
 
         if (!File.Exists(chapterMd))
         {
@@ -85,6 +85,10 @@ internal static class Program_Updater
         // -------- Parse chapters/sections --------
         var scanner = new ChapterScanner();
         var sections = scanner.Extract(md);
+        sections = sections.Where(s =>
+            !(string.Equals(s.Title, s.ChapterTitle, StringComparison.OrdinalIgnoreCase)
+              && s.Id == s.ChapterId)
+        ).ToList();
         if (sections.Count == 0)
         {
             Console.Error.WriteLine("[Updater] No sections found. Check headings (#/## or 'Chapter N. ...').");
@@ -141,7 +145,7 @@ internal static class Program_Updater
             var localSeen = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 
             // Gentle concurrency
-            using var throttler = new SemaphoreSlim(3);
+            using var throttler = new SemaphoreSlim(2); // slower but safer for arXiv
             var tasks = new List<Task<List<Dictionary<string, object?>>>>();
 
             foreach (var seed in scopedSeeds)
@@ -177,14 +181,14 @@ internal static class Program_Updater
 
                         return res;
                     }
-                    catch
+                    catch (Exception ex)
                     {
-                        // any hiccup — treat as empty
+                        Console.Error.WriteLine($"[Updater][Warning] Chapter {chapterIdNum}, seed '{seed}' failed: {ex.Message}");
                         return new List<Dictionary<string, object?>>();
                     }
                     finally
                     {
-                        try { throttler.Release(); } catch { /* ignore */ }
+                        try { throttler.Release(); } catch { }
                     }
                 }));
             }
@@ -210,10 +214,10 @@ internal static class Program_Updater
                     if (string.IsNullOrWhiteSpace(key)) continue;
 
                     // EXCLUSIVE across chapters
-                    if (!globalSeenKeys.Add(key)) continue;
+                    if (!localSeen.Add(key)) continue;
 
                     // de-dupe within this chapter
-                    if (!localSeen.Add(key)) continue;
+                    if (!globalSeenKeys.Add(key)) continue;
 
                     items.Add(it);
                 }
@@ -231,7 +235,8 @@ internal static class Program_Updater
             await File.WriteAllTextAsync(outPath, PrettyJson(new { items = ordered }));
 
             // Index: title + link + small preview
-            index.Add($"## {chapterTitle} (window: {endYear})");
+            // --- index entry for this chapter ---
+            index.Add($"## {chapterTitle}");
             index.Add($"[**{Path.GetFileName(outPath)}**](./{Path.GetFileName(outPath)})");
             index.Add("");
 
@@ -243,8 +248,11 @@ internal static class Program_Updater
                 listed++;
                 if (listed >= 5) break;
             }
-            if (listed == 0) index.Add("- _No items returned_");
-            index.Add("");
+            if (listed == 0)
+                index.Add("- _No items returned_");
+
+            index.Add("");  // blank line after each chapter block
+
 
             saved++;
         }
@@ -355,6 +363,15 @@ internal static class Program_Updater
     {
         try
         {
+            using var client = new HttpClient();
+            var resp = await client.GetAsync("http://localhost:8787/health"); // or /search_papers
+            if (resp.IsSuccessStatusCode)
+            {
+                Console.WriteLine("[Updater] MCP: already running externally.");
+                // Return a dummy McpClient that knows it’s external:
+                return null;  // or return a placeholder that sets IsReady = true but doesn't manage process
+            }
+
             if (string.IsNullOrWhiteSpace(cmd) || string.IsNullOrWhiteSpace(script))
             {
                 // Not configured to spawn; user may run server manually.
@@ -365,7 +382,7 @@ internal static class Program_Updater
             {
                 FileName = cmd,
                 Arguments = script,
-                UseShellExecute = false,
+                UseShellExecute = false,              // must be false to redirect IO
                 RedirectStandardInput = true,
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
@@ -495,82 +512,87 @@ internal static class Program_Updater
         }
     }
 
+
     private static async Task<List<Dictionary<string, object?>>> OpenAlexSearchAsync(
     string query, DateTime startDate, DateTime endDate, int limit)
     {
-        // Add your contact email to avoid 403 or throttling
-        var mailto = Environment.GetEnvironmentVariable("OPENALEX_MAILTO")
-                     ?? "you@domain.com";
-
-        // Build base URL: /works endpoint
-        var baseUrl = "https://api.openalex.org/works";
-
-        // Use “search” parameter to search across title / abstract etc.
-        var url = $"{baseUrl}?search={Uri.EscapeDataString(query)}" +
-                  $"&per-page={Math.Max(1, Math.Min(limit, 25))}" +
-                  $"&mailto={Uri.EscapeDataString(mailto)}";
-
-        // Optionally you could filter by publication date or year:
-        // e.g. &filter=publication_year:2020-2025 etc.
-        // But here we’ll fetch broadly and then filter locally by date window.
-
-        // Prepare request
-        using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
-        var req = new HttpRequestMessage(HttpMethod.Get, url);
-        req.Headers.UserAgent.ParseAdd($"SearchAgent1-Updater/1.0 (+mailto:{mailto})");
-
-        using var resp = await http.SendAsync(req, HttpCompletionOption.ResponseContentRead, cts.Token);
-        resp.EnsureSuccessStatusCode();
-        var body = await resp.Content.ReadAsStringAsync(cts.Token);
-
-        using var doc = JsonDocument.Parse(body);
-        var root = doc.RootElement;
-
-        var list = new List<Dictionary<string, object?>>();
-
-        // “results” is the array in OpenAlex
-        if (root.TryGetProperty("results", out var arr) && arr.ValueKind == JsonValueKind.Array)
+        try
         {
-            foreach (var w in arr.EnumerateArray())
+            // Use an email to get “polite‐pool” access and reduce 403s
+            var mailto = Environment.GetEnvironmentVariable("OPENALEX_MAILTO") ?? "you@example.com";
+
+            string baseUrl = "https://api.openalex.org/works";
+            // Build search URL, include mailto, and per-page (limit)
+            var url = $"{baseUrl}?search={Uri.EscapeDataString(query)}" +
+                      $"&per-page={Math.Max(1, Math.Min(limit, 25))}" +
+                      $"&mailto={Uri.EscapeDataString(mailto)}";
+
+            using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
+            using var req = new HttpRequestMessage(HttpMethod.Get, url);
+            req.Headers.UserAgent.ParseAdd($"SearchAgent1-Updater/1.0 (+mailto:{mailto})");
+
+            using var resp = await http.SendAsync(req, HttpCompletionOption.ResponseContentRead, cts.Token);
+            resp.EnsureSuccessStatusCode();
+
+            var body = await resp.Content.ReadAsStringAsync(cts.Token);
+            using var doc = JsonDocument.Parse(body);
+            var root = doc.RootElement;
+
+            var results = new List<Dictionary<string, object?>>();
+
+            if (root.TryGetProperty("results", out var arr) && arr.ValueKind == JsonValueKind.Array)
             {
-                // Extract fields
-                string? title = TryGetString(w, "title");
-                int? pubYear = TryGetInt(w, "publication_year");
-                string? doi = TryGetString(w, "doi");
-                string? venue = TryGetString(w, "host_venue", "display_name");
-                string? urlL = TryGetString(w, "primary_location", "landing_page_url")
-                              ?? TryGetString(w, "id");
-                string? pdf = TryGetString(w, "primary_location", "pdf_url");
-
-                // Optional: filter by date window
-                if (pubYear.HasValue)
+                foreach (var w in arr.EnumerateArray())
                 {
-                    var y = pubYear.Value;
-                    if (new DateTime(y, 1, 1) < startDate || new DateTime(y, 12, 31) > endDate.AddYears(1))
+                    // get publication year if present
+                    int? pubYear = null;
+                    if (w.TryGetProperty("publication_year", out var py) && py.ValueKind == JsonValueKind.Number)
                     {
-                        // you might want a stricter filter depending on your window
-                        // but here we skip if year is completely outside window
-                        // you can remove this check if too strict
+                        if (py.TryGetInt32(out var y)) pubYear = y;
                     }
+
+                    // filter by date window if year known
+                    if (pubYear.HasValue)
+                    {
+                        var y = pubYear.Value;
+                        var dtStartYear = new DateTime(y, 1, 1);
+                        var dtEndYear = new DateTime(y, 12, 31);
+                        if (dtEndYear < startDate || dtStartYear > endDate)
+                            continue;
+                    }
+
+                    string? title = TryGetString(w, "title");
+                    string? doi = TryGetString(w, "doi");
+                    string? venue = TryGetString(w, "host_venue", "display_name");
+                    string? urlL = TryGetString(w, "primary_location", "landing_page_url")
+                                    ?? TryGetString(w, "id");
+                    string? pdf = TryGetString(w, "primary_location", "pdf_url");
+
+                    var work = new Dictionary<string, object?>()
+                    {
+                        ["title"] = title,
+                        ["year"] = pubYear?.ToString(),
+                        ["venue"] = venue,
+                        ["doi"] = string.IsNullOrWhiteSpace(doi) ? null : doi,
+                        ["url"] = string.IsNullOrWhiteSpace(urlL) ? null : urlL,
+                        ["pdf_url"] = string.IsNullOrWhiteSpace(pdf) ? null : pdf
+                    };
+
+                    results.Add(work);
+                    if (results.Count >= limit) break;
                 }
-
-                var entry = new Dictionary<string, object?>()
-                {
-                    ["title"] = title,
-                    ["year"] = pubYear.HasValue ? pubYear.Value.ToString() : null,
-                    ["venue"] = venue,
-                    ["doi"] = string.IsNullOrWhiteSpace(doi) ? null : doi,
-                    ["url"] = string.IsNullOrWhiteSpace(urlL) ? null : urlL,
-                    ["pdf_url"] = string.IsNullOrWhiteSpace(pdf) ? null : pdf
-                };
-
-                list.Add(entry);
-                if (list.Count >= limit) break;
             }
-        }
 
-        return list;
+            return results;
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine($"[Updater][Warn] OpenAlex search failed for query '{query}': {ex.Message}");
+            return new List<Dictionary<string, object?>>();
+        }
     }
+
+
 
     // Helper methods to use in that implementation:
     private static string? TryGetString(JsonElement el, params string[] path)

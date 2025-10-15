@@ -189,7 +189,8 @@ Respond with the strict JSON object specified by the system message (chapter_id,
             // Only declare tools you actually support. Here: arXiv only.
             var tools = new object[]
             {
-                ToolDefArxiv()
+                ToolDefArxiv(),
+                ToolDefOpenAlex()
             };
 
             // Force the model to call the arXiv tool (no free-form output)
@@ -279,6 +280,30 @@ Respond with the strict JSON object specified by the system message (chapter_id,
                 }
             };
 
+        private static object ToolDefOpenAlex()
+    => new
+    {
+        type = "function",
+        function = new
+        {
+            name = "search_openalex",
+            description = "Search OpenAlex for papers by topic and date range.",
+            parameters = new
+            {
+                type = "object",
+                properties = new
+                {
+                    topic = new { type = "string", description = "Search query" },
+                    start = new { type = "string", format = "date", description = "Start date (YYYY-MM-DD)" },
+                    end = new { type = "string", format = "date", description = "End date (YYYY-MM-DD)" },
+                    limit = new { type = "integer", minimum = 1, maximum = 50 }
+                },
+                required = new[] { "topic", "start", "end" }
+            }
+        }
+    };
+
+
         private async Task<List<Resource>> DispatchToolAsync(string name, Dictionary<string, string> args, SearchRequest fb)
         {
             // Fallbacks from tool args → request
@@ -297,6 +322,9 @@ Respond with the strict JSON object specified by the system message (chapter_id,
             {
                 case "search_arxiv":
                     return await CallArxivAsync(topic, start, end, limit).ConfigureAwait(false);
+                case "search_openalex":
+                    // Future: plug your OpenAlexService here; for now just return empty
+                    return new List<Resource>();
 
                 default:
                     return new List<Resource>();
