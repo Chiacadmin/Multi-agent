@@ -1,5 +1,7 @@
 // Minimal MCP-compatible JSON-RPC server over stdio
 // Fast version: timeouts per source + partial results
+// setx SPRINGER_API_KEY "2b1f47e400c243111511600f315ac72a"
+// node dist/index.js
 import fetch from "node-fetch";
 import { XMLParser } from "fast-xml-parser";
 import readline from "node:readline";

@@ -50,7 +50,7 @@ internal static class Program_Updater
         var outDir = Path.Combine(projDir, "out", "updates");
         EnsureDir(outDir);
 
-        var startStr = GetArg(args, "start") ?? "2025-09-07";
+        var startStr = GetArg(args, "start") ?? "2025-01-01";
         var endStr = GetArg(args, "end") ?? DateTime.UtcNow.ToString("yyyy-MM-dd");
         var startDt = DateTime.Parse(startStr).Date;
         var endDt = DateTime.Parse(endStr).Date;
@@ -157,26 +157,44 @@ internal static class Program_Updater
                     {
                         // MCP first (if ready), else arXiv; MCP also includes arXiv per your index.ts
                         List<Dictionary<string, object?>> res;
+
+                        var springerKey = GetArg(args, "springerKey") ?? Environment.GetEnvironmentVariable("SPRINGER_API_KEY");
+
                         if (mcp != null && mcp.IsReady)
                         {
                             try
                             {
-                                res = await McpSearchAsync(mcp, seed, startDt, endDt, Math.Max(25, chapterItemCap));
+                                // Your MCP server may already merge arXiv/OpenAlex; still add OR/Springer locally for coverage
+                                var mcpItems = await McpSearchAsync(mcp, seed, startDt, endDt, Math.Max(25, chapterItemCap));
+
+                                // Also query OpenReview + Springer in parallel and merge
+                                var orTask = OpenReviewSearchAsync(seed, startDt, endDt, Math.Max(25, chapterItemCap));
+                                var spTask = SpringerSearchAsync(seed, startDt, endDt, Math.Max(25, chapterItemCap), springerKey);
+
+                                await Task.WhenAll(orTask, spTask);
+
+                                res = MergeMany(Math.Max(25, chapterItemCap), mcpItems, orTask.Result, spTask.Result);
                             }
                             catch
                             {
-                                // Fallback: query both OpenAlex + arXiv and merge
+                                // Fallback when MCP fails: OA + arXiv + OR + Springer
                                 var oa = await OpenAlexSearchAsync(seed, startDt, endDt, Math.Max(25, chapterItemCap));
                                 var ax = await ArxivSearchAsync(seed, startDt, endDt, Math.Max(25, chapterItemCap), arxivTimeoutMs);
-                                res = MergeLists(oa, ax, Math.Max(25, chapterItemCap));
+                                var orItems = await OpenReviewSearchAsync(seed, startDt, endDt, Math.Max(25, chapterItemCap));
+                                var spItems = await SpringerSearchAsync(seed, startDt, endDt, Math.Max(25, chapterItemCap), springerKey);
+
+                                res = MergeMany(Math.Max(25, chapterItemCap), oa, ax, orItems, spItems);
                             }
                         }
                         else
                         {
-                            // No MCP: directly use OpenAlex + arXiv merge
+                            // No MCP: directly use OA + arXiv + OR + Springer
                             var oa = await OpenAlexSearchAsync(seed, startDt, endDt, Math.Max(25, chapterItemCap));
                             var ax = await ArxivSearchAsync(seed, startDt, endDt, Math.Max(25, chapterItemCap), arxivTimeoutMs);
-                            res = MergeLists(oa, ax, Math.Max(25, chapterItemCap));
+                            var orItems = await OpenReviewSearchAsync(seed, startDt, endDt, Math.Max(25, chapterItemCap));
+                            var spItems = await SpringerSearchAsync(seed, startDt, endDt, Math.Max(25, chapterItemCap), springerKey);
+
+                            res = MergeMany(Math.Max(25, chapterItemCap), oa, ax, orItems, spItems);
                         }
 
                         return res;
@@ -293,6 +311,34 @@ internal static class Program_Updater
         TryAddList(list1);
         if (merged.Count < limit) TryAddList(list2);
 
+        return merged;
+    }
+
+    private static List<Dictionary<string, object?>> MergeMany(
+    int limit,
+    params List<Dictionary<string, object?>>[] lists)
+    {
+        var merged = new List<Dictionary<string, object?>>();
+        var seen = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+        foreach (var list in lists)
+        {
+            foreach (var it in list)
+            {
+                string key = FirstNotEmpty(
+                    it.TryGetValue("doi", out var d) ? d as string : null,
+                    it.TryGetValue("pdf_url", out var p) ? p as string : null,
+                    it.TryGetValue("url", out var u) ? u as string : null,
+                    it.TryGetValue("title", out var t) ? t as string : null
+                ) ?? "";
+                if (string.IsNullOrWhiteSpace(key)) continue;
+                if (!seen.Add(key)) continue;
+
+                merged.Add(it);
+                if (merged.Count >= limit) break;
+            }
+            if (merged.Count >= limit) break;
+        }
         return merged;
     }
 
@@ -592,7 +638,144 @@ internal static class Program_Updater
         }
     }
 
+    private static async Task<List<Dictionary<string, object?>>> SpringerSearchAsync(
+    string query, DateTime startDate, DateTime endDate, int limit, string? apiKey, int timeoutMs = 6000)
+    {
+        var results = new List<Dictionary<string, object?>>();
+        if (string.IsNullOrWhiteSpace(apiKey)) return results; // silently skip if no key
 
+        // Springer Metadata API — returns metadata (journal articles, chapters, etc.)
+        // Docs + playground: dev.springernature.com (free key) :contentReference[oaicite:2]{index=2}
+        string baseUrl = "https://api.springernature.com/metadata/json";
+        // Springer uses 'q' for query; for date window we filter client-side (metadata often has publicationDate)
+        var url = $"{baseUrl}?q={Uri.EscapeDataString(query)}&p={Math.Min(Math.Max(1, limit), 50)}&api_key={Uri.EscapeDataString(apiKey)}";
+
+        using var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromMilliseconds(Math.Max(1500, timeoutMs)));
+        var resp = await http.GetAsync(url, cts.Token);
+        if (!resp.IsSuccessStatusCode) return results;
+
+        var json = await resp.Content.ReadAsStringAsync(cts.Token);
+        using var doc = JsonDocument.Parse(json);
+        if (!doc.RootElement.TryGetProperty("records", out var recs) || recs.ValueKind != JsonValueKind.Array) return results;
+
+        foreach (var rec in recs.EnumerateArray())
+        {
+            string title = rec.GetPropertyOrDefault("title");
+            string publicationName = rec.GetPropertyOrDefault("publicationName");
+            string doi = rec.GetPropertyOrDefault("doi");
+            string dateStr = rec.GetPropertyOrDefault("publicationDate");
+            int? year = null;
+            if (DateTime.TryParse(dateStr, out var dt))
+            {
+                if (dt.Date < startDate || dt.Date > endDate) continue;
+                year = dt.Year;
+            }
+
+            // URLs can be a list; capture first
+            string urlField = "";
+            if (rec.TryGetProperty("url", out var urlArr) && urlArr.ValueKind == JsonValueKind.Array)
+            {
+                foreach (var u in urlArr.EnumerateArray())
+                {
+                    var v = u.GetPropertyOrDefault("value");
+                    if (!string.IsNullOrWhiteSpace(v)) { urlField = v; break; }
+                }
+            }
+
+            results.Add(new Dictionary<string, object?>
+            {
+                ["title"] = title,
+                ["year"] = year?.ToString(),
+                ["venue"] = string.IsNullOrWhiteSpace(publicationName) ? "Springer Nature" : publicationName,
+                ["doi"] = string.IsNullOrWhiteSpace(doi) ? null : doi,
+                ["url"] = string.IsNullOrWhiteSpace(urlField) ? null : urlField,
+                ["pdf_url"] = null
+            });
+            if (results.Count >= limit) break;
+        }
+        return results;
+    }
+
+    private static async Task<List<Dictionary<string, object?>>> OpenReviewSearchAsync(
+    string query, DateTime startDate, DateTime endDate, int limit, int timeoutMs = 6000)
+    {
+        var results = new List<Dictionary<string, object?>>();
+        // Heuristic: use the notes endpoint with a general term filter; we’ll trim client-side by year/date.
+        // Example endpoint (v1 style): /notes?term=...&limit=...  (OpenReview’s APIs evolve; we keep this tolerant.)
+        string baseUrl = "https://api.openreview.net/notes";
+        string url = $"{baseUrl}?term={Uri.EscapeDataString(query)}&limit={Math.Min(Math.Max(1, limit), 50)}";
+
+        using var cts = new System.Threading.CancellationTokenSource(TimeSpan.FromMilliseconds(Math.Max(1500, timeoutMs)));
+        var resp = await http.GetAsync(url, cts.Token);
+        if (!resp.IsSuccessStatusCode) return results;
+
+        var json = await resp.Content.ReadAsStringAsync(cts.Token);
+        using var doc = JsonDocument.Parse(json);
+        JsonElement arr = doc.RootElement;
+        if (doc.RootElement.ValueKind == JsonValueKind.Object && doc.RootElement.TryGetProperty("notes", out var notes))
+            arr = notes;
+        if (arr.ValueKind != JsonValueKind.Array) return results;
+
+        foreach (var n in arr.EnumerateArray())
+        {
+            // Titles/abstracts live in content fields; dates in "cdate"/"mdate" (millis) depending on venue.
+            string title = "";
+            string abs = "";
+            int? year = null;
+
+            if (n.TryGetProperty("content", out var content) && content.ValueKind == JsonValueKind.Object)
+            {
+                title = content.GetPropertyOrDefault("title");
+                abs = content.GetPropertyOrDefault("abstract") ?? content.GetPropertyOrDefault("tl;dr");
+            }
+
+            // date filtering (created/mdate in ms since epoch)
+            long ms = n.GetPropertyOrDefaultLong("cdate") ?? n.GetPropertyOrDefaultLong("mdate") ?? 0;
+            if (ms > 0)
+            {
+                var dt = DateTimeOffset.FromUnixTimeMilliseconds(ms).DateTime.Date;
+                if (dt < startDate || dt > endDate) continue;
+                year = dt.Year;
+            }
+
+            // Links
+            string forum = n.GetPropertyOrDefault("forum"); // id
+            string urlL = string.IsNullOrWhiteSpace(forum) ? null : $"https://openreview.net/forum?id={forum}";
+
+            results.Add(new Dictionary<string, object?>
+            {
+                ["title"] = title,
+                ["year"] = year?.ToString(),
+                ["venue"] = "OpenReview",
+                ["doi"] = null,
+                ["url"] = urlL,
+                ["pdf_url"] = null
+            });
+            if (results.Count >= limit) break;
+        }
+
+        return results;
+    }
+
+    // ---- JsonElement helpers used above ----
+    private static string GetPropertyOrDefault(this JsonElement el, string name)
+    {
+        if (el.TryGetProperty(name, out var v))
+        {
+            if (v.ValueKind == JsonValueKind.String) return v.GetString() ?? "";
+            if (v.ValueKind == JsonValueKind.Number) return v.ToString();
+        }
+        return "";
+    }
+    private static long? GetPropertyOrDefaultLong(this JsonElement el, string name)
+    {
+        if (el.TryGetProperty(name, out var v) && v.ValueKind == JsonValueKind.Number)
+        {
+            if (v.TryGetInt64(out var n)) return n;
+            if (long.TryParse(v.ToString(), out n)) return n;
+        }
+        return null;
+    }
 
     // Helper methods to use in that implementation:
     private static string? TryGetString(JsonElement el, params string[] path)
